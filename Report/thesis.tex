@@ -60,8 +60,8 @@
 
 \setlength\parindent{0pt} % Makes \noindent standard for entire document
 \usepackage{graphicx} % Required for including pictures
-\usepackage{caption}
-\usepackage{subcaption}
+\usepackage[font={footnotesize},labelfont=bf]{caption}
+\usepackage[font={footnotesize},labelfont=bf]{subcaption}
 \usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
 \usepackage{wrapfig} % Allows in-line images if needed
 \usepackage{hyperref}
@@ -179,12 +179,12 @@ Explorative data, hypotheses is made after variables is found, I'm looking to fi
 
 \newpage
 \section{Related Work}
-In this chapter I will assess state of the art work in three areas and its current methods for quality assessment: sleep, wearables used for sleep monitoring and aspects on how smartphones can be used to assess sleep. The focus of this thesis is based on the smartphone part, but to understand the data I have collected, it is important to have a basic understanding on sleep and wearables also. 
+This chapter will assess state of the art work in three areas and its current methods for quality assessment: sleep, wearables used for sleep monitoring and aspects on how smartphones can be used to assess sleep. This project is based on data collected from a smartphone application, but to understand the received data, and to be able to compare it with ground truth data from a wearable, it is important to have a basic understanding of sleep and wearables also.
 
 \subsection{Sleep}
-This section is about sleep research in general. My focus is on healthy people. \\
+This section is about sleep research in general. This project is focusing on healthy people. \\
 
-All human beings are following a roughly 24-hour cycle called a circadian rhythm \cite{bewellSleep}. This rhythm is like the big body clock controlling all the small biological clocks in our body and includes not only our biological 24-hour circle but also regular changes in cortisol, hormones like melatonin, and blood pressure \cite{bewellSleep}. In 1960 biologist Curt Richter noted the circadian rhythm for the first time \cite{circadian}, and along years after, many studies were made on animals to research relations between activity, sleep, and this 24-hour clock. In 1965 Jürgen Aschoff, one of the pioneers in this kind of study, called chronobiology, wrote that \textit{``whatever physiological variables we measure, we usually find that there is a maximum value at one time of day and minimum value at another''} \cite{rhythm}. Aschoff was the first to study these rhythms in human beings. Aschoff also builds a bunker to be able to isolate cues coming from timelike aspects \cite{rhythm2} and was able to prove the hypothesis that the human body clock is entrained by light. These findings created a new model stating that the circadian clock inside human beings uses external information to remain synchronised with environmental changes \cite{bewellSleep}. \\
+All human beings are following a roughly 24-hour cycle called a circadian rhythm \cite{bewellSleep}. This rhythm is like the big body clock controlling all the small biological clocks in our body and includes not only our biological 24-hour circle but also regular changes in cortisol, hormones like melatonin, and blood pressure \cite{bewellSleep}. In 1960 biologist Curt Richter noted the circadian rhythm for the first time \cite{circadian}, and along years after, many studies were made on animals to research relations between activity, sleep, and this 24-hour clock. In 1965 Jürgen Aschoff, one of the pioneers in this kind of study, called chronobiology, wrote that \textit{``whatever physiological variables we measure, we usually find that there is a maximum value at one time of day and minimum value at another''} \cite{rhythm}. Aschoff was the first to study these rhythms in human beings. Aschoff also builded a bunker to be able to isolate cues coming from timelike aspects \cite{rhythm2} and was able to prove the hypothesis that the human body clock is entrained by light. These findings created a new model stating that the circadian clock inside human beings uses external information to remain synchronised with environmental changes \cite{bewellSleep}. \\
 
 Sleep is a result of very complex interactions between several biochemical processes. We all have an internal battle between two mechanisms working against each other in the neural network responsible for sleep and wake activities. These are called the 'internal circadian oscillator' and 'the homeostatic system' - the first one is promoting wakefulness throughout the day, and the latter is increasing the drive to sleep the longer we have been awake \cite{promise}. When we go to sleep - the timing is determined by this circadian drive, and the duration is determined by the homeostatic system \cite{life}. A third factor, our social interactions such as social relationships and work, accompanies these two factors, giving people three highly complicated and individually diverse factors influencing and affecting our timing and quality of sleep: our circadian system, a homeostatic oscillator, and our social time.\\
 
@@ -195,6 +195,7 @@ A night of sleep consists of cycles of REM and NREM and the American Academy of 
   \begin{center}
     \includegraphics[width=0.48\textwidth]{img/rem}
   \end{center}
+    \vspace{-20pt}
   \caption{EEG of a typical REM sleep \cite{harvard}.}
   \label{fig:rem}
 \end{wrapfigure}
@@ -203,28 +204,32 @@ REM sleep is often called ``active sleep'' and measuring it with an EEG test it 
 
 \subsubsection{Non-Rapid-Eye-Movement (NREM)}
 \begin{wrapfigure}{r}{0.5\textwidth}
+  \vspace{-25pt}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{img/nrem}
   \end{center}
+    \vspace{-20pt}
   \caption{EEG of typical NREM sleep showing all three stages \cite{harvard}.}
+        \vspace{-20pt}
   \label{fig:nrem}
 \end{wrapfigure}
 
-As the name indicates, NREM sleep is where the eyes are still. Going from stage N1 to N3 the brain waves becomes slower and more synchronised. Stage N3 is the deepest of the NREM stages, and is also referred to as ``deep'' or ``slow-wave'' sleep \cite{harvard}. As seen in figure \ref{fig:nrem} an EEG shows the high-amplitude, low-frequency waves and spindles opposite to the REM sleep illustrated in figure \ref{fig:rem}. \\
+As the name indicates, NREM sleep is where the eyes are still. Going from stage N1 to N3 the brain waves becomes slower and more synchronised. Stage N3 is the deepest of the NREM stages, and is also referred to as ``deep'' or ``slow-wave'' sleep \cite{harvard}. As seen in figure \ref{fig:nrem} an EEG shows the high-amplitude, low-frequency waves and spindles opposite to the REM sleep illustrated in figure \ref{fig:rem}. 
 
-When awakened from either REM or NREM sleep, people usually report less dreaming when awakened from NREM sleep than from REM sleep \todo{find percentage or delete}. 
 
-\newpage
 \subsubsection{The Night Sleep Cycle}
+The cycling during a night's sleep between the four stages is in a healthy adult typically seen starting with NREM sleep. Stage N1 is the first stage of sleep and lasts only 1 to 7 minutes. The second stage is N2 which lasts around 10 to 25 minutes, and then the cycle moves on to stage N3 - the ``slow-wave'' sleep. 
+
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{img/hyp}
   \end{center}
+    \vspace{-20pt}
   \caption{Hypnogram showing the typical patterns of REM and NREM sleep during a night \cite{harvard}.}
   \label{fig:hyp}
 \end{wrapfigure}
 
-The cycling during a night's sleep between the four stages is in a healthy adult typically seen starting with NREM sleep. Stage N1 is the first stage of sleep and lasts only 1 to 7 minutes. The second stage is N2 which lasts around 10 to 25 minutes, and then the cycle moves on to stage N3 - the ``slow-wave'' sleep. This sleep stage generally lasts 20 to 40 minutes and by now it becomes increasingly difficult to wake an individual from sleep \cite{harvard}. After the N3 stage, the body goes back to a short 5 to 10 minutes period in the N2 stage before continuing to a REM sleep episode. \\
+This sleep stage generally lasts 20 to 40 minutes and by now it becomes increasingly difficult to wake an individual from sleep \cite{harvard}. After the N3 stage, the body goes back to a short 5 to 10 minutes period in the N2 stage before continuing to a REM sleep episode. \\
 
 The cycle continues during the night with more and more REM sleep and lesser N3 sleep, illustrated in figure \ref{fig:hyp}. According to Harvard Medical School \cite{harvard} no scientists know the reason for this cycling pattern during the night. 
 
@@ -566,7 +571,7 @@ Besides the timeline in \ref{fig:timeline}, an illustration of the data collecte
 ~
  		\includegraphics[width=\textwidth]{img/allAround3}
 ~
- 		\includegraphics[width=\textwidth]{img/allAround6}       
+ 		\includegraphics[width=\textwidth]{img/allAround4}       
        
         \caption{Illustration of data collecting from November 2015 through July 15, 2016}
         \label{fig:allAround}
