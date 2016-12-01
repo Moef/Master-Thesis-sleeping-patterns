@@ -83,6 +83,7 @@
 \usepackage[bottom]{footmisc}
 \usepackage{pdfpages}
 
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
 
 
 %TIKZ STUFF STARTS
@@ -233,7 +234,7 @@ This sleep stage generally lasts 20 to 40 minutes and by now it becomes increasi
 
 The cycle continues during the night with more and more REM sleep and lesser N3 sleep, illustrated in figure \ref{fig:hyp}. According to Harvard Medical School \cite{harvard} no scientists know the reason for this cycling pattern during the night. 
 
-\subsubsection{Recommended Hours of Sleep}\todo{find other recommendations}
+\subsubsection{Recommended Hours of Sleep}
 The National Sleep Foundation updated their recommendations on how much sleep a person needs in 2015 based on a literature study. They used the RAND/UCLA appropriateness Method to define recommendations for sleep duration based on age \cite{duration}. Table \ref{tab:recommendation} shows a sample of the full table with recommendations on sleep periods from the National Sleep Foundation. 
 
 \begin{table}[H]
@@ -256,24 +257,38 @@ Older adults & 7 to 8 & 5-6 or 9 & Less than 5\\
 65 years or older & & & More than 9\\
 	\hline
 	\end{tabular}
-	\caption{National Sleep Foundation's recommendations on sleep duration for young people and adults \cite{duration}.}
+	\caption{Recommendations on sleep duration for young people and adults made by the National Sleep Foundation \cite{duration}.}
 	\label{tab:recommendation}
 \end{footnotesize}
 \end{table}
 
+In 1982 the Cancer Prevention Study II (CPSII) collected more than 1.1 million questionnaires from American Adults ranging from 30 to 102 years of age. 6 years later the survival rate was ascertained \cite{arch}. This study showed that sleeping between 6.5 and 7.4 hours each night, gave the best chances of survival. People who slept 6 hours or less and 8 hours or more had a significant increased mortality rate. The study also showed that it was consistent between gender and ages. \\
+
+In 1984 University College London (UCL) started their Whitehall \rom{2} Study, and based on data from phase 5 (1997-1999) and phase 7 (2003-2004) a study was made to see if and how changes in sleep duration affects a persons cognitive function. 5431 middleaged participants' data was used \cite{cognitive}. The results shows the same trends as in Kripke et al \cite{arch}. Increasing sleep duration from 7 or 8 hours of sleep results in a poorer cognitive function which is also the case if decreasing from 6, 7, or 8 hours of sleep. \\
+
+STILL MISSING SOME FROM: \\
+- ``A Biofeedback System for Sleep Management''\\
+- ``REM Sleep Dysregulation in Depression: State of the Art''
+
+
 \subsection{Sleep Quality Assessment in Sleep Labs}
-Literature on sleep quality assessment in sleeping labs. 
+Going through literature, `sleep health' is a frequently used term but it is typically not defined. In 2014 Daniel J. Buysse is proposing a definition based on a positive attribute rather than a definition including any individual sleep disorder:
+\textit{``Sleep health is a multidimensional pattern of sleep-wakefulness, adapted to individual, social, and environmental demands, that promotes physical and mental well-being. Good sleep health is characterised by subjective satisfaction, appropriate timing, adequate duration, high efficiency, and sustained alertness during waking hours.''} \cite{define}. 
+The definition is builded on 5 dimensions of sleep; alertness, efficiency, duration, timing and satisfaction. These dimensions is defined as appropriate because they can be expressed in positive terms , most of them can be measured by self-reporting and analysis of behavioural and psychological levels, and they all are understandable for both professionals and members of the public. 
 
 \subsection{Wearables}
-Research on wearables in general + wearables for sleep assessment - Use only science papers...\\
+- ``Preliminary Analysis of the Use of Smartwatches for Longitudinal Health Monitoring''\\
+- ``The Boom in Wearable Technology: Cause for Alarm or Just What is Needed to Better Understand Sleep?''\\
+- ``Systematic Review of the Validity and Reliability of Consumer-Wearable Activity Trackers''\\
+- ``Consumer sleep tracking devices: a review ofmechanisms, validity and utility''\\
 
-\url{http://www.aasmnet.org/jcsm/AcceptedPapers/JC-498-14.pdf}\\
-\url{http://www.huffingtonpost.com/dr-christopher-winter/sleep-tips_b_4792760.html}
-\url{https://digital.lib.washington.edu/researchworks/handle/1773/26199}
+
 
 \newpage
 \subsection{Assesment of Sleep from Smartphones}
 \todo[inline]{Some introduction about that we use our smartphones all the time, next to bed, as alarms etc. Reference Dey-wac Ubicomp 11'}
+
+ALSO: ADD SOMETHING ABOUT THIS PAPER - ``A Global Quantification of `normal' Sleep Schedules Using Smartphone data''\\
 
 In this section, Table \ref{tab:tableApproach} lists the keywords from articles related to sleep about their \textit{goal}, what devices and sensors they used to get \textit{input}, their \textit{procedures}, what their \textit{output} was, how many \textit{people} they had participating in their experiment, and finally, for how long their study was running. Papers in Table \ref{tab:tableApproach} are as follows. \\
 
