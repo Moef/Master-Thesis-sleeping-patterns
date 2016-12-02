@@ -264,23 +264,34 @@ Older adults & 7 to 8 & 5-6 or 9 & Less than 5\\
 
 In 1982 the Cancer Prevention Study II (CPSII) collected more than 1.1 million questionnaires from American Adults ranging from 30 to 102 years of age. 6 years later the survival rate was ascertained \cite{arch}. This study showed that sleeping between 6.5 and 7.4 hours each night, gave the best chances of survival. People who slept 6 hours or less and 8 hours or more had a significant increased mortality rate. The study also showed that it was consistent between gender and ages. \\
 
-In 1984 University College London (UCL) started their Whitehall \rom{2} Study, and based on data from phase 5 (1997-1999) and phase 7 (2003-2004) a study was made to see if and how changes in sleep duration affects a persons cognitive function. 5431 middleaged participants' data was used \cite{cognitive}. The results shows the same trends as in Kripke et al \cite{arch}. Increasing sleep duration from 7 or 8 hours of sleep results in a poorer cognitive function which is also the case if decreasing from 6, 7, or 8 hours of sleep. \\
-
-STILL MISSING SOME FROM: \\
-- ``A Biofeedback System for Sleep Management''\\
-- ``REM Sleep Dysregulation in Depression: State of the Art''
-
+In 1984 University College London (UCL) started their Whitehall \rom{2} Study, and based on data from phase 5 (1997-1999) and phase 7 (2003-2004) a study was made to see if and how changes in sleep duration affects a persons cognitive function. 5431 middleaged participants' data was used \cite{cognitive}. The results shows the same trends as in Kripke et al \cite{arch}. Increasing sleep duration from 7 or 8 hours of sleep results in a poorer cognitive function which is also the case if decreasing from 6, 7, or 8 hours of sleep. 
 
 \subsection{Sleep Quality Assessment in Sleep Labs}
 Going through literature, `sleep health' is a frequently used term but it is typically not defined. In 2014 Daniel J. Buysse is proposing a definition based on a positive attribute rather than a definition including any individual sleep disorder:
 \textit{``Sleep health is a multidimensional pattern of sleep-wakefulness, adapted to individual, social, and environmental demands, that promotes physical and mental well-being. Good sleep health is characterised by subjective satisfaction, appropriate timing, adequate duration, high efficiency, and sustained alertness during waking hours.''} \cite{define}. 
-The definition is builded on 5 dimensions of sleep; alertness, efficiency, duration, timing and satisfaction. These dimensions is defined as appropriate because they can be expressed in positive terms , most of them can be measured by self-reporting and analysis of behavioural and psychological levels, and they all are understandable for both professionals and members of the public. 
+The definition is builded on 5 dimensions of sleep; alertness, efficiency, duration, timing and satisfaction. These dimensions is defined as appropriate because they can be expressed in positive terms , most of them can be measured by self-reporting and analysis of behavioural and psychological levels, and they all are understandable for both professionals and members of the public. \\
+
+A general accepted definition of `sleep quality' can be just as hard to find as a definition on `sleep health'. However, in 2012 Hamdan et al used several sleep quality parameters for their study using biofeedback and ambient intelligence to monitor the quality of sleep \cite{Hamdan2012ABS}. In this study, they created a Total Sleep Index (TSI) that indicates the overall sleep quality. These parameters used to calculate their TSI is listed in figure \ref{fig:parameters} along with optimal values for a healthy user and how to measure the parameter. 
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{img/parameters}
+        \caption{Parameters used by Hamdan et al to compute TSI as seen in \cite{Hamdan2012ABS}}
+        \label{fig:parameters}
+\end{figure}
+
 
 \subsection{Wearables}
-- ``Preliminary Analysis of the Use of Smartwatches for Longitudinal Health Monitoring''\\
-- ``The Boom in Wearable Technology: Cause for Alarm or Just What is Needed to Better Understand Sleep?''\\
+Millions of wearable devices have been sold worldwide, and individuals are using them to track different health-related topics including sleep \cite{boom}. Patients often present the results from these wearables to their doctors with the expectation of getting help to interpret the data. But due to the lack of a common standardised rule-set to determine if a device is performing well or not \cite{boom}, it is impossible for clinicians to interpret. However, the wearable technology is able to collect vital signs from million of individuals every minute of the day all year around, which is calling for a joint effort between the technology industry and the scientific sleep community. \\
+
+   
+
+
 - ``Systematic Review of the Validity and Reliability of Consumer-Wearable Activity Trackers''\\
+\cite{systematic}\\
+
 - ``Consumer sleep tracking devices: a review ofmechanisms, validity and utility''\\
+\cite{consumer}\\
 
 
 
@@ -371,6 +382,9 @@ The survey contained questions about studies, workload, sleep, phone and phone u
 Variables (from paper mQoL and from own data + data model PDF)
 
 \subsubsection{Smartwatch}
+- ``Preliminary Analysis of the Use of Smartwatches for Longitudinal Health Monitoring''\\
+\cite{EmilBasis}\\
+
 In June 2015 a wearable device called Fitbit Surge was tested as an alternative for the BASIS Peak smartwatch. The Fitbit Surge is a fitness watch that can track GPS, heart rate, statistics for activity during the day and sleep \cite{fitbit}. The purpose of this test was to get insight into what was possible to measure from a watch like this, and to verify the accuracy of the sleep detection. It was also investigated how detailed the data extracted from the watch could be.  \\
 
 According to Fitbit's developer site \cite{fitbit_dev}, it should be possible to obtain the data needed for this study, but it required an authentication between an application that will use the API and Fitbit. Fitbit only offers the possibility to export data from a user log in at the online dashboard; all users have available at Fitbit's website. Unfortunately, if exporting from the site, the CSV file with the data is only containing the total number of minutes asleep, and the total numbers of minutes awake, which is also what Fitbit illustrates with their example on their website \url{dev.fitbit.com} explaining the API \cite{fitbit_dev}. A more detailed view of the data from the watch was needed for this study, which is why the BASIS Peak was chosen.\\
