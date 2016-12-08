@@ -113,6 +113,8 @@
 \setlength\epigraphrule{0pt}
 
 \usepackage{etoolbox}
+\usepackage{lmodern}
+
 
 \makeatletter
 \patchcmd{\epigraph}{\@epitext{#1}}{\itshape\@epitext{#1}}{}{}
@@ -180,13 +182,14 @@ Explorative data, hypotheses is made after variables is found, I'm looking to fi
 
 \newpage
 \section{Related Work}
-This chapter will assess state of the art work in three areas and its current methods for quality assessment: sleep, wearables used for sleep monitoring and aspects on how smartphones can be used to assess sleep. This project is based on data collected from a smartphone application, but to understand the received data, and to be able to compare it with ground truth data from a wearable, it is important to have a basic understanding of sleep and wearables also.
+This chapter presents state of the art work in three areas and its current methods for quality and quantity assessment: sleep, wearables used for sleep monitoring and aspects on how smartphones can be used to assess sleep. This project is based on data collected from a smartphone application, but to understand the received data, and to be able to compare it with ground truth data from a wearable, it is important to have a basic understanding of sleep and wearables.
 
 \subsection{Sleep}
 This section is about sleep research in general. This project is focusing on healthy people. \\
 
-All human beings are following a roughly 24-hour cycle called a circadian rhythm \cite{bewellSleep}. This rhythm is like the big body clock controlling all the small biological clocks in our body and includes not only our biological 24-hour circle but also regular changes in cortisol, hormones like melatonin, and blood pressure \cite{bewellSleep}. In 1960 biologist Curt Richter noted the circadian rhythm for the first time \cite{circadian}, and along years after, many studies were made on animals to research relations between activity, sleep, and this 24-hour clock. In 1965 Jürgen Aschoff, one of the pioneers in this kind of study, called chronobiology, wrote that \textit{``whatever physiological variables we measure, we usually find that there is a maximum value at one time of day and minimum value at another''} \cite{rhythm}. Aschoff was the first to study these rhythms in human beings. Aschoff also builded a bunker to be able to isolate cues coming from timelike aspects \cite{rhythm2} and was able to prove the hypothesis that the human body clock is entrained by light. These findings created a new model stating that the circadian clock inside human beings uses external information to remain synchronised with environmental changes \cite{bewellSleep}. \\
+All human beings are following a roughly 24-hour cycle called a circadian rhythm \cite{bewellSleep}. This rhythm is like the big body clock controlling all the small biological clocks in our body and includes not only our biological 24-hour circle but also regular changes in cortisol, hormones like melatonin, and blood pressure \cite{bewellSleep}. In 1960 biologist Curt Richter noted the circadian rhythm for the first time \cite{circadian}, and along years after, many studies were made on animals to research relations between activity, sleep, and this 24-hour clock. In 1965 Jürgen Aschoff, one of the pioneers in this kind of study, called chronobiology, wrote that \textit{``whatever physiological variables we measure, we usually find that there is a maximum value at one time of day and minimum value at another''} \cite{rhythm}. Aschoff was the first to study these rhythms in human beings. Aschoff also builded a bunker to be able to isolate cues coming from timelike aspects \cite{rhythm2} and was able to prove the hypothesis that the human body clock is entrained by light. These findings created a new model stating that the circadian clock inside human beings uses external information to remain synchronised with environmental changes \cite{bewellSleep}.
 
+\subsubsection{Definition of Sleep}
 Sleep is a result of very complex interactions between several biochemical processes. We all have an internal battle between two mechanisms working against each other in the neural network responsible for sleep and wake activities. These are called the 'internal circadian oscillator' and 'the homeostatic system' - the first one is promoting wakefulness throughout the day, and the latter is increasing the drive to sleep the longer we have been awake \cite{promise}. When we go to sleep - the timing is determined by this circadian drive, and the duration is determined by the homeostatic system \cite{life}. A third factor, our social interactions such as social relationships and work, accompanies these two factors, giving people three highly complicated and individually diverse factors influencing and affecting our timing and quality of sleep: our circadian system, a homeostatic oscillator, and our social time.\\
 
 A night of sleep consists of cycles of REM and NREM and the American Academy of Sleep Medicine (AASM) \cite{aasm} divides NREM into three stages: N1, N2, and N3, with the last stage, also called delta sleep or slow-wave sleep \cite{visual}. 
@@ -234,7 +237,7 @@ This sleep stage generally lasts 20 to 40 minutes and by now it becomes increasi
 
 The cycle continues during the night with more and more REM sleep and lesser N3 sleep, illustrated in figure \ref{fig:hyp}. According to Harvard Medical School \cite{harvard} no scientists know the reason for this cycling pattern during the night. 
 
-\subsubsection{Recommended Hours of Sleep}
+\subsubsection{Sleep Quantity Recommendations}
 The National Sleep Foundation updated their recommendations on how much sleep a person needs in 2015 based on a literature study. They used the RAND/UCLA appropriateness Method to define recommendations for sleep duration based on age \cite{duration}. Table \ref{tab:recommendation} shows a sample of the full table with recommendations on sleep periods from the National Sleep Foundation. 
 
 \begin{table}[H]
@@ -266,7 +269,7 @@ In 1982 the Cancer Prevention Study II (CPSII) collected more than 1.1 million q
 
 In 1984 University College London (UCL) started their Whitehall \rom{2} Study, and based on data from phase 5 (1997-1999) and phase 7 (2003-2004) a study was made to see if and how changes in sleep duration affects a persons cognitive function. 5431 middleaged participants' data was used \cite{cognitive}. The results shows the same trends as in Kripke et al \cite{arch}. Increasing sleep duration from 7 or 8 hours of sleep results in a poorer cognitive function which is also the case if decreasing from 6, 7, or 8 hours of sleep. 
 
-\subsection{Sleep Quality Assessment in Sleep Labs}
+\subsubsection{Sleep Quality Recommendations}
 Going through literature, `sleep health' is a frequently used term but it is typically not defined. In 2014 Daniel J. Buysse is proposing a definition based on a positive attribute rather than a definition including any individual sleep disorder:
 \textit{``Sleep health is a multidimensional pattern of sleep-wakefulness, adapted to individual, social, and environmental demands, that promotes physical and mental well-being. Good sleep health is characterised by subjective satisfaction, appropriate timing, adequate duration, high efficiency, and sustained alertness during waking hours.''} \cite{define}. 
 The definition is builded on 5 dimensions of sleep; alertness, efficiency, duration, timing and satisfaction. These dimensions is defined as appropriate because they can be expressed in positive terms , most of them can be measured by self-reporting and analysis of behavioural and psychological levels, and they all are understandable for both professionals and members of the public. \\
@@ -281,36 +284,36 @@ A general accepted definition of `sleep quality' can be just as hard to find as 
 \end{figure}
 
 
-\subsection{Wearables}
+\subsection{Wearables in Sleep Assessment}
+A Wearable is... \\
+
 Millions of wearable devices have been sold worldwide, and individuals are using them to track different health-related topics including sleep \cite{boom}. Patients often present the results from these wearables to their doctors with the expectation of getting help to interpret the data. But due to the lack of a common standardised rule-set to determine if a device is performing well or not \cite{boom}, it is impossible for clinicians to interpret. However, the wearable technology is able to collect vital signs from million of individuals every minute of the day all year around, which is calling for a joint effort between the technology industry and the scientific sleep community. \\
 
-   
+These wearables devices are already used in research studies for self-monitoring \cite{systematic} hence it is important to establish validity and reliability on tracking devices. In 2015 Evenson et al. made a comparison study based on studies available in three different databases. The comparison was made on Fitbit wearables and Jawbone with keywords like `validity', `comparison', `reliability', and `accuracy' \cite{systematic}. Not all Fitbit and Jawbone trackers have been subject for a study, so the comparison was made between five out of nine Fitbit trackers and two out of six Jawbone trackers. For the Fitbit trackers, that gave the following selected measurements in total: steps, distance, calories, sleep, altimeter, and active minutes. For the Jawbone it was: steps, calories, distance, and sleep. \\
 
+The review study concluded, that most of the trackers was mostly accurate on calculating steps, if the wearer was not walking too slow - though these results had high interdevice reliability. The lower validity showed to be on energy expenditure and sleep.\\
 
-- ``Systematic Review of the Validity and Reliability of Consumer-Wearable Activity Trackers''\\
-\cite{systematic}\\
+In 2016 a similar review was made but only with sleep as the focus area \cite{consumer}. Traditionally the `golden standard' for measuring sleep is polysomnography (PSG). Another device used in clinical sleep medicine is a wrist-worn devise called Actigraphy which is based on the principle that physical movements are increased when an individual are awake and reduced during sleep. According to B. P. Kolla et al. only a few studies have been made to compare data from wearable devices with PSG and actigraphy, and this review is based on those studies and is aimed for practicing clinicians \cite{consumer}. \\
 
-- ``Consumer sleep tracking devices: a review ofmechanisms, validity and utility''\\
-\cite{consumer}\\
+The results was:... \\
+Recommended wearables:...\\
 
-
+B. P. Kolla et al conclude their review by summarising the ten key issues they found during their study. Amongst these key issues was that studies shows inconsistency in accuracy in sleep onset latency (SOL) measured by fitness trackers and sleep applications for mobile phones. The trackers and applications also tend to overestimate total sleep time (TST) and sleep efficiency (SE), and underestimate wake time after sleep onset (WASO).
 
 \newpage
-\subsection{Assesment of Sleep from Smartphones}
-\todo[inline]{Some introduction about that we use our smartphones all the time, next to bed, as alarms etc. Reference Dey-wac Ubicomp 11'}
-
-ALSO: ADD SOMETHING ABOUT THIS PAPER - ``A Global Quantification of `normal' Sleep Schedules Using Smartphone data''\\
+\subsection{Assesment of Sleep based on Smartphones and Wearables}
+From several studies it is clear, that we use our smartphones almost all the time. A mobile phone is no longer just a tool to call someone, it is also a working device, a substitute for an alarm clock, a way to track exercise and much more \cite{dey-wac-ubicomp}. This section focus on previous studies on how assessment of sleep from smartphones have been done before. \\
 
 In this section, Table \ref{tab:tableApproach} lists the keywords from articles related to sleep about their \textit{goal}, what devices and sensors they used to get \textit{input}, their \textit{procedures}, what their \textit{output} was, how many \textit{people} they had participating in their experiment, and finally, for how long their study was running. Papers in Table \ref{tab:tableApproach} are as follows. \\
 
 In May 2012 Andrew T. Campbell and Computer Science Department at Dartmouth College released an application called BeWell on Google Play \cite{bewellDartmouth}. 
 
-\begin{wraptable}{r}{7cm}
+\begin{wraptable}{r}{8cm}
 \center
 \begin{footnotesize}
-	\begin{tabular}{|p{2.8cm} |p{0.7cm} |p{0.7cm} |p{0.7cm} |}
+	\begin{tabular}{|p{2.8cm} |p{1.2cm} |p{1.2cm} |p{1.2cm} |}
 	\hline
-	\textbf{Sensors} & \textbf{2012} & \textbf{2014} & \textbf{2013} \\
+	\textbf{Sensors} & \textbf{{\tiny 2012 \cite{beWell}}} & \textbf{{\tiny 2014 \cite{toss}}} & \textbf{{\tiny 2013 \cite{compare}}} \\
 	\hline
 Accelerometer & & x & \\
 Application usage & x & & 	\\
@@ -318,16 +321,16 @@ Battery state & & x & \\
 Browser history & x & & \\
 Browser search & x & & \\	
 Calls & x & & \\
-Charging & &  & x\\
+If charging & &  & x\\
 Light & & x & x\\
 Location & x & & \\
 Lock & &  & x\\
 Microphone & & x &\\
-Off & &  & x\\
+Phone off & &  & x\\
 Screen usage & x & x & x\\
 Silence & &  & x\\  
 SMS & x & & 	\\
-Stationary & &  & x\\
+No movement & &  & x\\
 	\hline
 	\end{tabular}
 	\caption{Sensors used in the three mentioned BeWell studies - listed under the year the study was presented.}
@@ -335,9 +338,9 @@ Stationary & &  & x\\
 \end{footnotesize}
 \end{wraptable}
 
-The application is a smartphone application made to monitor the smartphone owners everyday behaviour, hence potentially promote the wellbeing of that owner. The application is made for Android smartphones and uses the built in sensors in the phone to collect activities, ``that impact physical, social and mental wellbeing namely, sleep, physical activity, and social interactions...''\cite{beWell}. The sleep algorithm in the application was presented in a paper two years later by Tanzeem Choudhury, one of the people behind BeWell. The article included their pseudocode for calculating sleep duration from persons usage of their smartphone \cite{bewellSleep}. The aim of the study was to investigate if smartphone usage patterns are indicative of discrepancies in circadian rhythms. The data collection was running for 97 days and was done by 9 participants. Besides the smartphone application each participant was regularly interviewed and asked to fill out a sleep journal. The sensors used in the application is listed in Table \ref{tab:sensors}.\\ 
+The application is a smartphone application made to monitor the smartphone owners everyday behaviour, hence potentially promote the wellbeing of that owner. The application is made for Android smartphones and uses the built in sensors in the phone to collect activities, \textit{``that impact physical, social and mental wellbeing namely, sleep, physical activity, and social interactions...''} \cite{beWell}. The sleep algorithm in the application was presented in a paper two years later by Tanzeem Choudhury, one of the people behind BeWell. The article included their pseudocode for calculating sleep duration from persons usage of their smartphone \cite{bewellSleep}. The aim of the study was to investigate if smartphone usage patterns are indicative of discrepancies in circadian rhythms. The data collection was running for 97 days and was done by 9 participants. Besides the smartphone application each participant was regularly interviewed and asked to fill out a sleep journal. The sensors used in the application is listed in Table \ref{tab:sensors}.\\ 
 
-A similar study was presented in 2014 by Jun-Ki Min et. al.\cite{toss} also using a mobile phone application to learn how and when people sleep. This study is the biggest study regarding number of participants mentioned here and ran for one month. The study's objective was to investigate how well a commodity smartphone sense and model sleep and sleep quality. They identified sleep quality using the Pittsburgh Sleep Quality Index (PSQI) \cite{quality}. The study collected data from 27 participants with a wide range of sleep contexts.  The participants filled out a sleep journal and the sensors used from their smartphones is illustrated in Table \ref{tab:sensors}. \\
+A similar study was presented in 2014 by Jun-Ki Min et. al. \cite{toss} also using a mobile phone application to learn how and when people sleep. This study is the biggest study regarding number of participants mentioned here and ran for one month. The study's objective was to investigate how well a commodity smartphone sense and model sleep and sleep quality. They identified sleep quality using the Pittsburgh Sleep Quality Index (PSQI) \cite{quality}. The study collected data from 27 participants with a wide range of sleep contexts.  The participants filled out a sleep journal and the sensors used from their smartphones is illustrated in Table \ref{tab:sensors}. \\
 
 A comparison study on two smartphone models, a wrist mounted device called Jawbone Up and a Zeo Sleep Manager Pro headband was described in a paper from 2013 made by Tanzeem Choudhury and Andrew T. Campbell et. al. \cite{compare}. This study aimed to investigate if a smartphone only approach can measure sleep duration accurately enough, and for that they had 8 participants collecting data for a week. This study also used sleep journals and the sensors used in their smartphone application is listed in Table \ref{tab:sensors}. 
 
@@ -348,14 +351,14 @@ For an overview purpose all three studies are illustrated in Table \ref{tab:tabl
 \begin{footnotesize}
 	\begin{tabular}{|p{2.2cm} |p{2.5cm} |p{2cm} |p{2.1cm} |p{2.8cm} |p{1.8cm} |}
 	\hline
-	\textbf{Goal} & \textbf{Input} & \textbf{Procedure} & \textbf{Output} & \textbf{\# People} & \textbf{Time}\\
+	\textbf{Goal} & \textbf{Input} & \textbf{Modeling} & \textbf{Output} & \textbf{\# People} & \textbf{Study Duration}\\
 	\hline
 	\hline
-	(2012) Are smartphone usage patterns indicative of discrepancies in circadian rhythms? & Sleep journals\newline Interviews \newline Smartphone  & Machine Learning (only data between 10PM and 7AM) & 23.8 min from actual sleep duration. & 7 males + \newline 2 females. \newline Undergraduate students between 19 and 25 years of age. & 97 days = \newline 5 $\times$ 4 $\times$ 5 weeks (Fall, Winter and Spring)\\
+	(2012 \cite{beWell}) Are smartphone usage patterns indicative of discrepancies in circadian rhythms? & - Sleep journals\newline - Interviews \newline - Smartphone \newline(sensors illustrated in Table \ref{tab:sensors})  & Machine Learning (only data between 10PM and 7AM) & $\pm$ 23.8 min. from actual \newline sleep \newline duration & 7 males + \newline 2 females. \newline Undergraduate students between 19 and 25 years of age. & 97 days = \newline 5 $\times$ 4 $\times$ 5 weeks (Fall, Winter and Spring)\\
 	\hline
-	(2013) Can a smartphone only approach measure sleep duration accurately enough? & Zeo Headband\newline Jawbone Wristband\newline Smartphone\newline Sleep journals & Machine Learning and user friendliness & $\pm$ 42 minutes from actual sleep duration. & 8 males. \newline Visiting scholars or graduate students between 23 and 31 years of age. (Computer Science or Material Engineering) & One week \\
+	(2013 \cite{compare}) Can a smartphone only approach measure sleep duration accurately enough? & - Zeo Headband\newline - Jawbone \newline Wristband\newline - Smartphone \newline(sensors illustrated in Table \ref{tab:sensors})\newline - Sleep journals & Machine Learning and user friendliness & $\pm$ 42 min. from actual \newline sleep \newline duration & 8 males. \newline Visiting scholars or graduate students between 23 and 31 years of age. (Computer Science or Material Engineering) & One week \\
 	\hline
-	(2014) How well can a commodity smartphone sense and model sleep and sleep quality? & Sleep journals\newline Smartphone & Machine Learning & $\pm$ 49 minutes from actual sleep duration & 8 males + \newline 19 females. \newline Ranged in age from 20 to 59 and approximately 80 \% of participants reported working or going to school during daylight hours. & One month \\
+	(2014 \cite{toss}) How well can a commodity smartphone sense and model sleep and sleep quality? & - Sleep journals\newline - Smartphone \newline(sensors illustrated in Table \ref{tab:sensors}) & Machine Learning & $\pm$ 49 min. from  actual \newline sleep \newline duration & 8 males + \newline 19 females. \newline Ranged in age from 20 to 59 and approximately 80 \% of participants reported working or going to school during daylight hours. & One month \\
 	\hline 
 	\end{tabular}
 	\caption{State of the art - related work}
@@ -370,7 +373,7 @@ For an overview purpose all three studies are illustrated in Table \ref{tab:tabl
 Meta introduction to the chapter
 
 \subsection{Overview}
-The demographic information on the participants in this study was acquired with an entry survey they filled out online before the data collection started. Hereafter a smartphone application from mQoL Living Lab in Geneva \cite{mQOL} was installed on the participants phones. When installing the application, the participants was also set up with a smartwatch from BASIS, used as a baseline. In the beginning and the middle of the data collection period the participants was asked to reconstruct their previous day using the Day Reconstruction Method (DRM) \cite{drm}. All subjects have filled out at least 6 DRM's. 
+The demographic information on the participants in this study was acquired with an entry survey they filled out online before the data collection started. Hereafter a smartphone application from mQoL Living Lab in Geneva \cite{mQOL} was installed on the participants phones. When installing the application, the participants was also set up with a smartwatch from BASIS, used as a baseline. In the beginning and the middle of the data collection period the participants was asked to reconstruct their previous day using the Day Reconstruction Method (DRM) \cite{drm}. All subjects have filled out at least six DRM's. 
 
 \subsection{Methods}
 Meta introduction to this sub section. 
@@ -382,9 +385,6 @@ The survey contained questions about studies, workload, sleep, phone and phone u
 Variables (from paper mQoL and from own data + data model PDF)
 
 \subsubsection{Smartwatch}
-- ``Preliminary Analysis of the Use of Smartwatches for Longitudinal Health Monitoring''\\
-\cite{EmilBasis}\\
-
 In June 2015 a wearable device called Fitbit Surge was tested as an alternative for the BASIS Peak smartwatch. The Fitbit Surge is a fitness watch that can track GPS, heart rate, statistics for activity during the day and sleep \cite{fitbit}. The purpose of this test was to get insight into what was possible to measure from a watch like this, and to verify the accuracy of the sleep detection. It was also investigated how detailed the data extracted from the watch could be.  \\
 
 According to Fitbit's developer site \cite{fitbit_dev}, it should be possible to obtain the data needed for this study, but it required an authentication between an application that will use the API and Fitbit. Fitbit only offers the possibility to export data from a user log in at the online dashboard; all users have available at Fitbit's website. Unfortunately, if exporting from the site, the CSV file with the data is only containing the total number of minutes asleep, and the total numbers of minutes awake, which is also what Fitbit illustrates with their example on their website \url{dev.fitbit.com} explaining the API \cite{fitbit_dev}. A more detailed view of the data from the watch was needed for this study, which is why the BASIS Peak was chosen.\\
@@ -409,7 +409,7 @@ Basis Peak is a fitness and sleep tracker \cite{basis}. A comparison between the
     \label{fig:pilot0}
 \end{figure}
 
-Figure \ref{fig:pilot1} shows the results of a more regular night, the night between a Sunday and Monday. Comparing the visualisations in both Figure \ref{fig:pilot0} and Figure \ref{fig:pilot1} it is clear that the two watches does not measure the exact same time for sleeping\todo{add the real value to compare}. It is also evident that the Basis Peak is measuring in more details than the Fitbit Surge. \\
+Figure \ref{fig:pilot1} shows the results of a more regular night, the night between a Sunday and Monday. Comparing the visualisations in both Figure \ref{fig:pilot0} and Figure \ref{fig:pilot1} it is clear that the two watches does not measure the exact same time for sleeping. The time of sleep between the days illustrated in Figure \ref{fig:pilot0} was from 01:40 to 12:30. It is also evident that the Basis Peak is measuring in more details than the Fitbit Surge. \\
 
 Both watches have a second view in their application for the smartphones, a more detailed view. In Figure \ref{fig:pilot2} the second type of view is illustrated, and it is clear to see that Fitbit's view is far less detailed than the BASIS view. BASIS adds a timeline for sleep to visualise when REM, interruptions, and deep sleep occurred during the night. The difference between BASIS and Fitbit is illustrated in Figure \ref{fig:pilot1}.
 
@@ -451,7 +451,13 @@ Both watches have a second view in their application for the smartphones, a more
 
 Extracting data from the BASIS watch was not possible through the user login at the website as first initiated, and the BASIS support team could not help either. Fortunately, there exists a third party script written in Python called Basis Retriever \cite{basis_retriever}. With that, it is possible to extract a CSV file from a given user that contains detailed information about the users sleep on a particular day. It is possible to download both for a single day, but also a summary for an entire month. Appendix \ref{sec:subset} contains a subset of how a CSV file with data from a single day is looking. \\
 
-Because the BASIS Peak watch is more precise\todo{add how it is determined} in measuring sleep than the Fitbit Surge, and because of Basis Retriever, it was decided that the BASIS watch was the best of the two, hence the one used in the study. \todo[inline]{Skriv om de der straps og over heeting}
+Because we could not extract the data collected in raw format from the Fitbit watch, and because the BASIS Peak watch was more precise in measuring sleep according to our examples in \ref{fig:pilot0} and Figure \ref{fig:pilot1}, it was decided that the BASIS watch was the best of the two, hence the one used in the study. \\
+
+In 2015 Emil Jovanov \cite{EmilBasis} made a preliminary study on BASIS Peak with heart rate measurement as the focus. Javanov concludes clearly that the technology in smartwatches today is efficient enough to perform longitudinal monitoring and analysis on health and related trends. \\
+
+During our data collecting period, we experienced a few issues with the BASIS Peak watch. By the end of December a participant S19 decided to drop out of the study, because the wristband gave her a rash. According to several forums online found by searches on Google, this was something several people had experienced. Participant S14 also experienced the rashes but decided to stay in the study anyway. He just switch the watch between his wrists when the rash was to much on the current wearing wrist. \\
+
+In June 2016 the BASIS team send out information about some problems with the watch. Some users had experienced overheating which in some cases had caused blisters and burns. Back then, they recommended people to stop using the watch until they had solved the issue, which caused participant S13 to drop the experiment. BASIS reported that approximately 0.2\% of their sold watches was affected by this issue. Unfortunately they could not solve the overheating issue, and decided to recall all devices sold. The data collected with any of their devices would be available on the website as always until December 31, 2016. 
 
 \subsubsection{Day Reconstruction Method}
 
@@ -479,7 +485,10 @@ This project was initiated in September 2015 as a part-time master thesis, endin
 	August 2016 & \\
 	September 2016 & \\
 	October 2016 & \\
-	November 2016 & Hand in on November ??\\
+	November 2016 & \\
+	December 2016 & \\
+	January 2017 & \\
+	February 2017 & Hand in on February 28$^{th}$\\
 	\hline
 	\end{tabular}
 	\caption{Monthly based timeplan for project.}
@@ -492,11 +501,8 @@ This project was initiated in September 2015 as a part-time master thesis, endin
 \subsection{Recruitment Process}
 The target group for the study was students with Android smartphones with at least Android software version 4.4 to run the mQoL application, and Bluetooth version 2 or above to be able to connect to the BASIS peak application. The social network Facebook was used to get in contact with potential participants and hereafter most contact was happening via email. Ten subjects were found in the first round, but unfortunately one did not have a smartphone fulfilling the requirements after all, and it took around four weeks to find a substitute. A more detailed description of the participants can be seen in Section \ref{sec:participants}.
 
-\subsection{Previously Collected Data via Social Fabric}
-This section might be deleted
-
 \newpage	
-\section{Experiment \# 1}
+\section{Experiment \# 1}\todo{NEW HEADLINE!}
 \label{sec:experiment1}
 This chapter is about the participants and the data collected from November to the end of March. The quality of the data was investigated, and during this investigation interesting questions came up. From the DRM's and the initial survey it was seen that some participants worked out more than others, and it was researched if participants slept better or worse after a work out compared to other days and if the subjects who worked out in general slept better than the subjects who did not work out. Statistics was made to see if there was difference in sleep in weekdays and weekends/holidays. It was also investigated if exam periods influenced the sleep quantity and quality and if master students had different sleep patterns than bachelor students, and if being in a relationship seems to affect the sleeping patterns. 
 \todo[inline]{these things should of course also be investigated for the second period and compared with the first one}
