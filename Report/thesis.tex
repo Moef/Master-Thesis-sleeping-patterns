@@ -272,36 +272,94 @@ In 1984 University College London (UCL) started their Whitehall \rom{2} Study, a
 \subsubsection{Sleep Quality Recommendations}
 Going through literature, `sleep health' is a frequently used term but it is typically not defined. In 2014 Daniel J. Buysse is proposing a definition based on a positive attribute rather than a definition including any individual sleep disorder:
 \textit{``Sleep health is a multidimensional pattern of sleep-wakefulness, adapted to individual, social, and environmental demands, that promotes physical and mental well-being. Good sleep health is characterised by subjective satisfaction, appropriate timing, adequate duration, high efficiency, and sustained alertness during waking hours.''} \cite{define}. 
-The definition is builded on 5 dimensions of sleep; alertness, efficiency, duration, timing and satisfaction. These dimensions is defined as appropriate because they can be expressed in positive terms , most of them can be measured by self-reporting and analysis of behavioural and psychological levels, and they all are understandable for both professionals and members of the public. \\
+The definition is builded on 5 dimensions of sleep; alertness, efficiency, duration, timing and satisfaction. These dimensions is defined as appropriate because they can be expressed in positive terms, most of them can be measured by self-reporting and analysis of behavioural and psychological levels, and they all are understandable for both professionals and members of the public. \\
 
-A general accepted definition of `sleep quality' can be just as hard to find as a definition on `sleep health'. However, in 2012 Hamdan et al used several sleep quality parameters for their study using biofeedback and ambient intelligence to monitor the quality of sleep \cite{Hamdan2012ABS}. In this study, they created a Total Sleep Index (TSI) that indicates the overall sleep quality. These parameters used to calculate their TSI is listed in figure \ref{fig:parameters} along with optimal values for a healthy user and how to measure the parameter. 
+A general accepted definition of `sleep quality' can be just as hard to find as a definition on `sleep health'. However, in 2012 Hamdan et al used several sleep quality parameters for their study using biofeedback and ambient intelligence to monitor the quality of sleep \cite{Hamdan2012ABS}. In this study, they created a Total Sleep Index (TSI) that indicates the overall sleep quality. The parameters used to calculate their TSI is listed in Table \ref{tab:sleepQuality} along with optimal values for the parameters and how to measure them. The parameters are based on healthy people. 
 
-\begin{figure}[H]
-    \centering
-        \includegraphics[width=\textwidth]{img/parameters}
-        \caption{Parameters used by Hamdan et al to compute TSI as seen in \cite{Hamdan2012ABS}}
-        \label{fig:parameters}
-\end{figure}
-
+\begin{table}[H]
+\center
+\begin{footnotesize}
+	\begin{tabular}{|p{4cm} |p{2.6cm} |p{4cm} |p{3.3cm} |}
+%	\begin{tabular}{| c | c | c | c |}
+	\hline
+	\textbf{Parameters} & \textbf{Optimal Value} & \textbf{Description} & \textbf{Sensors} \\
+	\hline
+	Sleep efficiency (SE) & $>$ 95\% & total sleep time $\times$ 100 / total time in bed & Electrocardiography, \newline Actimeter\\
+	\hline
+	Sleep latency (SL) & $<$ 15 minutes & Time from lights off till beginning of sleep & Electrocardiography, \newline Actimeter\\
+	\hline 
+	Number of awakenings (NA) & $<$ 10 & Number of awakenings during night & Electrocardiography, \newline Actimeter\\
+	\hline
+	Wake after sleep onset (WASO) & $<$ 15 minutes & The total time spent awake during sleep period time & Electrocardiography, \newline Actimeter\\
+	\hline
+	Periodic limb movements index (PLMI) & $<$ 30/h & Average number of limb movements per hour & Actimeter\\
+	\hline
+	Stage 1 percentage (S1) & 1-5\% of total sleep time & Stage 1 time / total sleep time & Electrocardiography\\
+	\hline
+	Stage 2 (light sleep) percentage (S2) & 50\% of total sleep time & Stage 1 time / total sleep time & Electrocardiography\\
+	\hline
+	Stage 3 and 4 (deep sleep) percentage (S34) & 10-20 \% of total sleep time & Stage 3 and 4 time / total sleep time & Electrocardiography\\
+	\hline
+	REM percentage (PR) & 20-25 \% of total sleep time & Stage REM time / total sleep time & Electrocardiography\\
+	\hline
+	REM latency (RL) & 90 minutes & Time from beginning of sleep until appearance of first REM sleep & Electrocardiography\\
+	\hline
+	Respiratory Disturbance Index (RDI) & $<$ 5/h & Average number of respiratory disturbances (cessation of breathing lasting more than 10 seconds) / total sleep time & Oximeter\\
+	\hline
+	Snoring index (SI) & $<$ 5/h & Number of snoring breaths per hour of sleep & Microphone\\
+	\hline
+	\end{tabular}
+	\caption{Parameters used by Hamdan et al to compute TSI as seen in \cite{Hamdan2012ABS}}
+	\label{tab:sleepQuality}
+\end{footnotesize}
+\end{table}
 
 \subsection{Wearables in Sleep Assessment}
-A Wearable is... \\
+A wearable refers to a small part of technology that are incorporated into accessories that makes it possible to wear it on the body, for example like a smartwatch. \\
 
-Millions of wearable devices have been sold worldwide, and individuals are using them to track different health-related topics including sleep \cite{boom}. Patients often present the results from these wearables to their doctors with the expectation of getting help to interpret the data. But due to the lack of a common standardised rule-set to determine if a device is performing well or not \cite{boom}, it is impossible for clinicians to interpret. However, the wearable technology is able to collect vital signs from million of individuals every minute of the day all year around, which is calling for a joint effort between the technology industry and the scientific sleep community. \\
+Millions of wearable devices have been sold worldwide, and individuals are using them to track different health-related topics including sleep \cite{boom}. Patients often present the results from these wearables to their doctors with the expectation of getting help to interpret the data. But due to the lack of a common standardised rule-set to determine if a device is performing well or not \cite{boom}, it is impossible for clinicians to interpret. However, the wearable technology is able to collect vital signs from million of individuals every minute of the day all year around, which is calling for a joint effort between the technology industry and the scientific sleep community. 
 
 These wearables devices are already used in research studies for self-monitoring \cite{systematic} hence it is important to establish validity and reliability on tracking devices. In 2015 Evenson et al. made a comparison study based on studies available in three different databases. The comparison was made on Fitbit wearables and Jawbone with keywords like `validity', `comparison', `reliability', and `accuracy' \cite{systematic}. Not all Fitbit and Jawbone trackers have been subject for a study, so the comparison was made between five out of nine Fitbit trackers and two out of six Jawbone trackers. For the Fitbit trackers, that gave the following selected measurements in total: steps, distance, calories, sleep, altimeter, and active minutes. For the Jawbone it was: steps, calories, distance, and sleep. \\
 
 The review study concluded, that most of the trackers was mostly accurate on calculating steps, if the wearer was not walking too slow - though these results had high interdevice reliability. The lower validity showed to be on energy expenditure and sleep.\\
 
-In 2016 a similar review was made but only with sleep as the focus area \cite{consumer}. Traditionally the `golden standard' for measuring sleep is polysomnography (PSG). Another device used in clinical sleep medicine is a wrist-worn devise called Actigraphy which is based on the principle that physical movements are increased when an individual are awake and reduced during sleep. According to B. P. Kolla et al. only a few studies have been made to compare data from wearable devices with PSG and actigraphy, and this review is based on those studies and is aimed for practicing clinicians \cite{consumer}. \\
+In 2016 a similar review was made but only with sleep as the focus area \cite{consumer}. Traditionally the `golden standard' for measuring sleep is polysomnography (PSG). Another device used in clinical sleep medicine is a wrist-worn devise called Actigraphy which is based on the principle that physical movements are increased when an individual are awake and reduced during sleep. According to B. P. Kolla et al. only a few studies have been made to compare data from wearable devices with PSG and actigraphy, and this review is based on those studies and is aimed for practicing clinicians \cite{consumer}. PSG and actigraphy typically measures the sleep parameters listed in Table \ref{tab:psgparameters}. 
 
-The results was:... \\
-Recommended wearables:...\\
+\begin{table}[H]
+\center
+\begin{footnotesize}
+	\begin{tabular}{|p{3.2cm} |p{4.6cm} |p{6.5cm} |}
+	\hline
+	\textbf{Parameter} & \textbf{Definition} & \textbf{Relevance}\\
+	\hline
+	Sleep latency (SL) & Time taken to fall asleep & Can be prolonged in patients with insomnia complaining of difficulty initiating sleep \\
+	\hline
+	TRT & Time in bed until time out of bed & Total duration of recording\\
+	\hline
+	WASO & Time spend awake after initially falling asleep & Can be prolonged in patients with insomnia complaining of difficulty maintaining sleep \\
+	\hline
+	TST & TRT - WASO & \\
+	\hline
+	Sleep efficiency (SE) & TST / TRT $\times$ 100 & Gives a measure on time spent asleep of total time in bed \\
+	\hline
+	Arousal index & Number of arousals / TST (arousal = wake period < 10 s) & Excess number of arousals and awakenings suggests increased sleep fragmentation\\ 
+	\hline
+	Awakening index & Number of arousals / TST (awakening = wake period > 10 s & Excess number of arousals and awakenings suggests increased sleep fragmentation \\
+	\hline
+	\end{tabular}
+	\caption{Typical parameters measured with PSG and actigraphy as listed in \cite{consumer}}
+	\label{tab:psgparameters}
+\end{footnotesize}
+\end{table}
 
-B. P. Kolla et al conclude their review by summarising the ten key issues they found during their study. Amongst these key issues was that studies shows inconsistency in accuracy in sleep onset latency (SOL) measured by fitness trackers and sleep applications for mobile phones. The trackers and applications also tend to overestimate total sleep time (TST) and sleep efficiency (SE), and underestimate wake time after sleep onset (WASO).
+Besides reviewing other studies B. P. Kolla et al. also reviewed the mechanism used by available sleep monitoring devices. Both actigraphs and wearables measuring sleep are using accelerometers, but only actigraphs is using well-validated algorithms. The algorithms used by wearables are not known or open source, which makes it impossible to validate the results medically. However they manage to go through the most common open source approaches, which concludes that the challenge in detecting sleep/wake periods is essentially a classification issue. \\
+
+Going through literature that review the validity on currently available wearables monitoring sleep, B. P. Kolla et al. have the same studies as Evenson et al. - Fitbit and Jawbone wearables. The result from this review was that the wearables and applications used for tracking sleep tends to overestimate total sleep time (TST) and sleep efficiency (SE), and underestimate wake time after onset (WASO). Furthermore there was inconsistency in accuracy in sleep onset latency (SOL) measured by fitness trackers and sleep applications for mobile phones.\\
+
+None of the studies end up by recommending a specific wearable, but they do recommend a more general key point for the manufacturers behind the wearables. To validate the algorithms used in the sleep wearables, they have to make them public. It is not possible for clinicians to rely on data from devices that can not be medical validated. Also it is concluded that sleep tracking wearables and applications tend to have a reasonable sensitivity but a poor specificity.  
 
 \newpage
-\subsection{Assesment of Sleep based on Smartphones and Wearables}
+\subsection{Assesment of Sleep Quality and Quantity based on Smartphones and Wearables}
 From several studies it is clear, that we use our smartphones almost all the time. A mobile phone is no longer just a tool to call someone, it is also a working device, a substitute for an alarm clock, a way to track exercise and much more \cite{dey-wac-ubicomp}. This section focus on previous studies on how assessment of sleep from smartphones have been done before. \\
 
 In this section, Table \ref{tab:tableApproach} lists the keywords from articles related to sleep about their \textit{goal}, what devices and sensors they used to get \textit{input}, their \textit{procedures}, what their \textit{output} was, how many \textit{people} they had participating in their experiment, and finally, for how long their study was running. Papers in Table \ref{tab:tableApproach} are as follows. \\
@@ -356,7 +414,7 @@ For an overview purpose all three studies are illustrated in Table \ref{tab:tabl
 	\hline
 	(2012 \cite{beWell}) Are smartphone usage patterns indicative of discrepancies in circadian rhythms? & - Sleep journals\newline - Interviews \newline - Smartphone \newline(sensors illustrated in Table \ref{tab:sensors})  & Machine Learning (only data between 10PM and 7AM) & $\pm$ 23.8 min. from actual \newline sleep \newline duration & 7 males + \newline 2 females. \newline Undergraduate students between 19 and 25 years of age. & 97 days = \newline 5 $\times$ 4 $\times$ 5 weeks (Fall, Winter and Spring)\\
 	\hline
-	(2013 \cite{compare}) Can a smartphone only approach measure sleep duration accurately enough? & - Zeo Headband\newline - Jawbone \newline Wristband\newline - Smartphone \newline(sensors illustrated in Table \ref{tab:sensors})\newline - Sleep journals & Machine Learning and user friendliness & $\pm$ 42 min. from actual \newline sleep \newline duration & 8 males. \newline Visiting scholars or graduate students between 23 and 31 years of age. (Computer Science or Material Engineering) & One week \\
+	(2013 \cite{compare}) Can a smartphone only approach measure sleep duration accurately enough? & - Zeo Headband\newline - Jawbone \newline Wristband\newline - Smartphone \newline(sensors illustrated in Table \ref{tab:sensors})\newline - Sleep journals & Machine Learning and user experience & $\pm$ 42 min. from actual \newline sleep \newline duration & 8 males. \newline Visiting scholars or graduate students between 23 and 31 years of age. (Computer Science or Material Engineering) & One week \\
 	\hline
 	(2014 \cite{toss}) How well can a commodity smartphone sense and model sleep and sleep quality? & - Sleep journals\newline - Smartphone \newline(sensors illustrated in Table \ref{tab:sensors}) & Machine Learning & $\pm$ 49 min. from  actual \newline sleep \newline duration & 8 males + \newline 19 females. \newline Ranged in age from 20 to 59 and approximately 80 \% of participants reported working or going to school during daylight hours. & One month \\
 	\hline 
@@ -366,7 +424,8 @@ For an overview purpose all three studies are illustrated in Table \ref{tab:tabl
 \end{footnotesize}
 \end{table}
 
-
+\subsection{Summarising}
+As seen, several studies have been made with sleep as main focus. However all studies had a very limited scope, focusing only on a few variables in either a smartphone or a wearable. Our study will try to look at the whole picture, collecting all data possible from our participants smartphones to see if we can find patterns that correlates with the participants sleep.   
 
 \newpage
 \section{Methodology}
