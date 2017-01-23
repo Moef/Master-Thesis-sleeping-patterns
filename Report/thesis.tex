@@ -452,23 +452,23 @@ All data collected with the mQoL-log application is collected with a UNIX timest
 \begin{table}[H]
 \center
 \begin{footnotesize}
-	\begin{tabular}{| p{4cm} | p{2.7cm} | p{8.1cm} |}
+	\begin{tabular}{| p{5.4cm} | p{1.5cm} | p{7.8cm} |}
 	\hline
 	\textbf{Description} & \textbf{When} & \textbf{Information Collected} \\
 	\hline
-	Screen and phone orientation & On event & timestamp, event \\
+	Screen and phone orientation \texttt{<IMEI>\_UserPresenceEvents.csv} & On event & timestamp, event \\
 	\hline
-	Information about currently running services & Every 60 seconds & timestamp, service, parent\_process, uid, pid, active\_since, state, foreground, service\_internet\_access, client\_count, crash\_count, last\_active\\
+	Information about currently running services \texttt{<IMEI>\_ActivityServService.csv} & Every 60 seconds & timestamp, service, parent\_process, uid, pid, active\_since, state, foreground, service\_internet\_access, client\_count, crash\_count, last\_active\\
 	\hline
-	Information about applications the user starts using & On event & timestamp, app, uid, pid, app\_internet\_access, importance, on\_top\\
+	Information about applications the user starts using \texttt{<IMEI>\_ApplicationsUsed.csv} & On event & timestamp, app, uid, pid, app\_internet\_access, importance, on\_top\\
 	\hline
-	Information about the cell the phone is connected to & Every 60 seconds & timestamp, cid, lac, mnc, mcc, rssi, network, operator, connected, cdma\\
+	Information about the cell the phone is connected to \texttt{<IMEI>\_CellIdService.csv} & Every 60 seconds & timestamp, cid, lac, mnc, mcc, rssi, network, operator, connected, cdma\\
 	\hline
-	Statistics about intervals between screen touches from a screen is switched on till it is switched off again & On event & timestamp, counter, min\_interval, max\_interval, range, mean, median, variance, standard\_deviation, session\_duration \\
+	Statistics about intervals between screen touches from a screen is switched on till it is switched off again \texttt{<IMEI>\_TouchesBuffered.csv} & On event & timestamp, counter, min\_interval, max\_interval, range, mean, median, variance, standard\_deviation, session\_duration \\
 	\hline
-	User activity detected by Google Play activity API & Every 60 seconds & timestamp, activity (in\_vehicle, on\_bicycle, on\_foot, running, still, tilting, unknown, walking) \\
+	User activity detected by Google Play activity API \texttt{<IMEI>\_UserActivity.csv} & Every 60 seconds & timestamp, activity (in\_vehicle, on\_bicycle, on\_foot, running, still, tilting, unknown, walking) \\
 	\hline
-	Luminance from when the screen is on & On event & timestamp, sensor, light\\
+	Luminance from when the screen is on \texttt{<IMEI>\_UserPrecenseLight.csv} & On event & timestamp, sensor, light\\
 	\hline	 
 	\end{tabular}
 	\caption{Overview of data collected with the mQoL-log application from mQoL Living Lab}
@@ -745,9 +745,9 @@ For later references and easier overview, Table \ref{tab:beginning} is showing e
 
 \newpage
 \section{Data Collection}
-This chapter is about our data collection. We collected data from November 2015 to mid July 2016. We split the data collection into two periods; experiment 1 and experiment 2. The first experiment run from when the participant starts through March 2016, and the second run from April 1, 2016 to July 15, 2016 when the data collection ended. \\
+This chapter is about the data collection. Data was collected from November 2015 to mid July 2016, and split into two sessions; experiment 1 and experiment 2. The first experiment run from when the participant starts through March 2016, and the second run from April 1, 2016 to July 15, 2016 when the data collection ended. \\
 
-We analysed experiment 1 first to learn, and used our algorithms on the data from experiment 2 to check up on our results. 
+The data from experiment 1 was used as learning data, and the data from experiment 2 was used to check our results from experiment 1. 
 
 \subsection{Experiment \#1}
 Not researching on the quality of the data but only the quantity, the amount of minutes from when a participant started until March 31 was calculated. Table \ref{tab:totalMinutesWatch} is showing how many minutes with any kind of data the Basis Retriever could export to the daily .CSV files from the watches. Table \ref{tab:totalMinutesWatch} is not differencing between what kind of data the columns contains, only if there is data in them. Later on the results from the quality is illustrated. 
