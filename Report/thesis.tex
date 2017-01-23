@@ -403,9 +403,9 @@ A similar study was presented in 2014 by Jun-Ki Min et. al. \cite{toss} also usi
 
 A comparison study on two smartphone models, a wrist mounted device called Jawbone Up and a Zeo Sleep Manager Pro headband was described in a paper from 2013 made by Tanzeem Choudhury and Andrew T. Campbell et. al. \cite{compare}. This study aimed to investigate if a smartphone only approach can measure sleep duration accurately enough, and for that they had 8 participants collecting data for a week. This study also used sleep journals and the sensors used in their smartphone application is listed in Table \ref{tab:sensors}. 
 
-For an overview purpose all three studies are illustrated in Table \ref{tab:tableApproach}. These studies shows that there exists attempts to answer sleep quantity using a smartphones sensors. One study even used a sleep quality index to test if values from the smartphone sensors was accurate enough. All three studies used Machine Learning in their analysis of the collected data. Our method focus on both sleep quality and quantity. 
+For an overview purpose all three studies are illustrated in Table \ref{tab:tableApproach}. These studies shows that there exists attempts to answer sleep quantity using a smartphones sensors. One study even used a sleep quality index to test if values from the smartphone sensors was accurate enough. All three studies used Machine Learning in their analysis of the collected data. Our method focus on both sleep quality and quantity. \\
 
-\begin{table}[H]
+\begin{table}%[H]
 \center
 \begin{footnotesize}
 	\begin{tabular}{|p{2.2cm} |p{2.5cm} |p{2cm} |p{2.1cm} |p{2.8cm} |p{1.8cm} |}
@@ -425,6 +425,9 @@ For an overview purpose all three studies are illustrated in Table \ref{tab:tabl
 \end{footnotesize}
 \end{table}
 
+In 2016 Christensen et al \cite{demographPhones} presented an analysis on the relationship between smartphone screen-time and demographics and sleep. The participants came from the Health eHeart Study, an internet-based longitudinal cohort study open to any interested over the age of 18. A smartphone application was installed on the participants phones and measured the number of minutes per hour the screen was on as screen-time. It was found that longer average screen-time was associated with shorter sleep duration and worse sleep-efficiency. Also a longer average screen-time during bedtime and during the sleeping period were associated with poorer sleep quality and decreased sleep-efficiency. Furthermore younger age participants was associated with longer average screen-time. 
+
+\newpage
 \subsection{Conclusion and Thesis Focus}
 As seen, several studies have been made with sleep as main focus. However all studies had a very limited scope, focusing only on a few variables in either a smartphone or a wearable. Our study will try to look at the whole picture, collecting all data possible from our participants smartphones to see if we can find patterns that correlates with the participants sleep quantity and quality.   
 
@@ -551,7 +554,11 @@ Jovanov concludes that the technology in smartwatches today is efficient enough 
 The BASIS watch collects the following variables every minute: date and time, skin temperature, air temperature, heart rate, steps, galvanic skin response (gsr), calories, activity type (bike, manual, moderate activity, run, walk), sleep type (deep, REM, light, unknown), and toss and turns during sleep. 
 
 \subsubsection{Day Reconstruction Method}
-The Day Reconstruction Method (DRM) is a way to assess how the participants spend their time and how they experience it for the last 24 hours \cite{drm}. These DRM's was collected once a week from each participant over two periods of time, in the beginning of the data collection period (experiment \#1) and again in the beginning of the second data collection period (experiment \#2). We used the DRM's as validation points for specific days to check our theories and to validate the patterns derived from the data collected. The DRM's was labelled with fifteen labels that is known to affect sleep quality: silence (SIL), temperature (TEM), stressfree (STR), bedtime (BED), exercise (EXE), health (HEA), nonalcohol (NON), awake (AWA), breathing (BRE), music (MUS), darkness (DAR), meditate (MED), stimuli (STI), alone (ALO), and reading (REA). 
+The Day Reconstruction Method (DRM) is a way to assess how the participants spend their time and how they experience it for the last 24 hours \cite{drm}. These DRM's was collected once a week from each participant over two periods of time, in the beginning of the data collection period (experiment \#1) and again in the beginning of the second data collection period (experiment \#2). We used the DRM's as validation points for specific days to check our theories and to validate the patterns derived from the data collected. \\
+
+Next to this study, another thesis study was conducted with the title ``Factors Influencing Individual's Sleep Quality and Quantity'' \cite{kimie}. This study coded the answers from the participants into 15 different labels for categorising what influences sleep quality: silence (SIL), temperature (TEM), stressfree (STR), bedtime (BED), exercise (EXE), health (HEA), nonalcohol (NON), awake (AWA), breathing (BRE), music (MUS), darkness (DAR), meditate (MED), stimuli (STI), alone (ALO), and reading (REA). \\
+
+The Danish Council on Health and Disease Prevention created a report in 2015 about sleep and health. That report supports some of Kimie Bodin Ryager's labels on factors influencing sleep quality and list the following lifestyle and psychological and behavioural advices on sleep: No coffee, alcohol, energy-rich and fatty foods before bedtime, be physical active during the day, optimal room temperature which for most individuals is 18-21 degrees Celcius, silence, no screen light from electronic devices, no light, go to bed and get up at regular times, no naps for more than 20 minutes, only use the bedroom for sleeping and sex, avoid negative thoughts \cite{vff}. 
 
 \newpage 
 \section{User Study and Setup}
@@ -598,7 +605,7 @@ This project was initiated in September 2015 as a part-time master thesis, endin
 The target group for the study was students with Android OS smartphones with at least Android software version 4.4 to run the mQoL-log application, and Bluetooth version 2 or above to be able to connect to the BASIS peak application. The social network Facebook was used to get in contact with potential participants and hereafter most contact was happening via email. Before finalising the recruitment process we got the ethics protocol approved by the university ethics committee.
 
 \subsection{Participants} \label{sec:participants}
-The participants consists of 10 students primarily from University of Copenhagen (UCPH), and a single student from the IT University. They are all between the age of 18 and 30, and no one have children. In Table \ref{tab:partOv} an overview of the participant and their living conditions is shown. S11 lived with 2 friends before he moved in together with his girlfriend. S14 finished his master one month before the data collection period stopped and as seen in Figure \ref{fig:timeline} S19 dropped out of the experiment in January 2016 because the strap from the watch gave her a rash, and S18 dropped out in February because he lost his phone and bought an iPhone instead of an Android smartphone which made him unable to run the application from mQoL. In June S13 decided not to wear the watch any more due to the recommendations send out from BASIS regarding the heating issues. 
+The participants consists of 10 students primarily from University of Copenhagen (UCPH), and a single student from the IT University (ITU). They are all between the age of 18 and 30, and no one have children. In Table \ref{tab:partOv} an overview of the participant and their living conditions is shown. S11 lived with 2 friends before he moved in together with his girlfriend. S14 finished his master one month before the data collection period stopped and as seen in Figure \ref{fig:timeline} S19 dropped out of the experiment in January 2016 because the strap from the watch gave her a rash, and S18 dropped out in February because he lost his phone and bought an iPhone instead of an Android smartphone which made him unable to run the application from mQoL. In June S13 decided not to wear the watch any more due to the recommendations send out from BASIS regarding the heating issues. 
 
 \begin{table}[H]
 \center
@@ -672,8 +679,6 @@ Only two of the participants was master students, S11 and S14. S11 was writing o
 \end{table}
 
 \subsection{Collected Data Summary}
-This summary is for the data period ending at March 31, 2016, 11:59:59 PM unless a participant dropped out before that time. \\
-
 In Figure \ref{fig:timeline} a timeline over the entire data collection period is illustrated showing when the participants started, dropped out and when exams periods and holidays was during this time. Participant numbers written in green symbols when the participant started collecting data, and the red is illustrating when the participant decided to drop out of the experiment. 
 
 \begin{figure}[H]
@@ -727,26 +732,30 @@ For later references and easier overview, Table \ref{tab:beginning} is showing e
 	\label{tab:beginning}
 \end{footnotesize}
 \end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%ABOVE IS SOMEWHAT PROOFREAD!%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newpage
+\section{Data Collection}
+This chapter is about our data collection. We collected data from November 2015 to mid July 2016. We split the data collection into two periods; experiment 1 and experiment 2. The first experiment run from when the participant starts through March 2016, and the second run from April 1, 2016 to July 15, 2016 when the data collection ended. \\
 
+We analysed experiment 1 first to learn, and used our algorithms on the data from experiment 2 to check up on our results. 
 
-
-\newpage	
-\section{Experiment \# 1}\todo{NEW HEADLINE!}
-\label{sec:experiment1}
-This chapter is about the participants and the data collected from November to the end of March. The quality of the data was investigated, and during this investigation interesting questions came up. From the DRM's and the initial survey it was seen that some participants worked out more than others, and it was researched if participants slept better or worse after a work out compared to other days and if the subjects who worked out in general slept better than the subjects who did not work out. Statistics was made to see if there was difference in sleep in weekdays and weekends/holidays. It was also investigated if exam periods influenced the sleep quantity and quality and if master students had different sleep patterns than bachelor students, and if being in a relationship seems to affect the sleeping patterns. \\
-\todo[inline]{these things should of course also be investigated for the second period and compared with the first one}
-
-
-
-
-
+\subsection{Experiment \#1}
 Not researching on the quality of the data but only the quantity, the amount of minutes from when a participant started until March 31 was calculated. Table \ref{tab:totalMinutesWatch} is showing how many minutes with any kind of data the Basis Retriever could export to the daily .CSV files from the watches. Table \ref{tab:totalMinutesWatch} is not differencing between what kind of data the columns contains, only if there is data in them. Later on the results from the quality is illustrated. 
 
 \begin{table}[H]
 \center
 \begin{footnotesize}
-	\begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c |}
+	\begin{tabular}{| c | c || c | c | c | c | c | c | c | c | c |}
 	\hline
 	\textbf{S\#} & \textbf{Total} & \textbf{Skin} & \textbf{Air} & \textbf{Heart} & \textbf{Steps} & \textbf{GSR} & \textbf{Calories} & \textbf{Activity} & \textbf{Sleep} & \textbf{Toss}\\
 	 & & \textbf{temp} & \textbf{temp} & \textbf{rate} & & & & \textbf{type} & \textbf{type} & \textbf{turn}\\
@@ -778,8 +787,32 @@ Not researching on the quality of the data but only the quantity, the amount of 
 \end{footnotesize}
 \end{table}
 
-\subsection{Results}
-Sleep statistics, phone usage stats (on/off/present). 
+In table \ref{tab:daysNightsExp1} a total number of days and nights with any kind of data is listed. The definition of days and nights is defined like this: \todo{FIND SOMETHING TO WRITE HERE}. ALSO WRITE SOMETHING ABOUT HOW YOU DEFINED WHEN A DAY/NIGHT IS VALID OR INVALID AND WHY!
+
+\begin{table}[H]
+\center
+\begin{footnotesize}
+	\begin{tabular}{| c | c | c || c | c | c | c | c | c | c | c |}
+	\hline
+	\textbf{S\#} & \textbf{Total} & \textbf{Total} & \textbf{Days} & \textbf{Nights} \\
+	& \textbf{Days} & \textbf{Nights} & & \\
+	\hline
+	S11 & & & & \\
+	S12 & & & & \\
+	S13 & & & & \\
+	S14 & & & & \\
+	S15 & & & & \\
+	S16 & & & & \\
+	S17 & & & & \\
+	S18 & & & & \\
+	S19 & & & & \\
+	S20 & & & & \\
+	\hline
+	\end{tabular}
+	\caption{Days and nights with any kind of data from beginning to March 31, 2016 - smartwatch.}
+	\label{tab:daysNightsExp1}
+\end{footnotesize}
+\end{table}
 
 In Table \ref{tab:averageTotal}, a total average of the first six columns of the BASIS retriever data is shown. For skin- and air temperature, heart rate, and GSR, the average value is calculated based on each data entry in the data set (i.e. seconds) whereas the average for steps and calories is calculated based on a total for each day. 
 
@@ -1471,6 +1504,114 @@ In Table \ref{tab:averageTotal}, a total average of the first six columns of the
     \label{fig:avgCal}
 \end{figure}
 
+NOW YOU NEED TO MAKE THE SAME TABLES FOR THE PHONE DATA:
+As seen in Table \ref{tab:ping} we work with 7 different file types that contains all our data collected via the smartphones. Below in Table \ref{tab:totalMinutesPhone} is listed how many minutes with any kind of data the files contain. As in Table \ref{tab:totalMinutesWatch}, Table \ref{tab:totalMinutesPhone} does not difference between what kind of data the files contain, only if there is data in them. 
+
+\begin{table}[H]
+\center
+\begin{footnotesize}
+	\begin{tabular}{| c || c | c | c | c | c | c | c | c | c | c |}
+	\hline
+	\textbf{S\#} & \textbf{User} & \textbf{Activity} & \textbf{Applications} & \textbf{CellIds} & \textbf{Touches} & \textbf{User} & \textbf{User}\\
+	
+	& \textbf{Precense} & \textbf{Serv} & \textbf{Used} & \textbf{Service} & \textbf{Buffered} & \textbf{Presence} &\textbf{Light} \\
+	
+	& \textbf{Events} & \textbf{Service} & & & & \textbf{Activity} & \\
+	\hline
+	S11 & & & & & & &\\
+	S12 & & & & & & &\\
+	S13 & & & & & & &\\
+	S14 & & & & & & &\\
+	S15 & & & & & & &\\
+	S16 & & & & & & &\\
+	S17 & & & & & & &\\
+	S18 & & & & & & &\\
+	S19 & & & & & & &\\
+	S20 & & & & & & &\\
+	\hline
+	\end{tabular}
+	\caption{Days and nights with any kind of data from beginning to March 31, 2016 - smartphone.}
+	\label{tab:totalMinutesPhone}
+\end{footnotesize}
+\end{table}
+
+In table \ref{tab:daysNightsExp1Phone} a total number of days and nights with any kind of data is listed. The definition of days and nights for the smartphones is defined like this: \todo{FIND SOMETHING TO WRITE HERE}. ALSO WRITE SOMETHING ABOUT HOW YOU DEFINED WHEN A DAY/NIGHT IS VALID OR INVALID AND WHY!
+
+\begin{table}[H]
+\center
+\begin{footnotesize}
+	\begin{tabular}{| c | c | c || c | c | c | c | c | c | c | c |}
+	\hline
+	\textbf{S\#} & \textbf{Total} & \textbf{Total} & \textbf{Days} & \textbf{Nights} \\
+	& \textbf{Days} & \textbf{Nights} & & \\
+	\hline
+	S11 & & & & \\
+	S12 & & & & \\
+	S13 & & & & \\
+	S14 & & & & \\
+	S15 & & & & \\
+	S16 & & & & \\
+	S17 & & & & \\
+	S18 & & & & \\
+	S19 & & & & \\
+	S20 & & & & \\
+	\hline
+	\end{tabular}
+	\caption{Days and nights with any kind of data from beginning to March 31, 2016 - smartphone.}
+	\label{tab:daysNightsExp1Phone}
+\end{footnotesize}
+\end{table}
+
+
+\subsubsection{Sleep Quantity Assessment}
+\paragraph{Sleep Quantity Results}
+
+
+\subsubsection{Sleep Quality Assessment}
+\paragraph{Sleep Quality Results}
+
+
+
+
+\newpage
+\subsection{Experiment \#2}
+\subsubsection{Sleep Quantity Assessment}
+\paragraph{Sleep Quantity Results}
+
+
+
+\subsubsection{Sleep Quality Assessment}
+\paragraph{Sleep Quality Results}
+
+
+
+\newpage
+ALT HERUNDER ER RUBBISH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage	
+%\section{Data collection}
+%\subsection{Experiment \#1}
+%\label{sec:experiment1}
+%This chapter is about the participants and the data collected from November 2015 to end of March 2016. The quality of the data was investigated, and during this investigation interesting questions came up. From the DRM's and the initial survey it was seen that some participants worked out more than others, and it was researched if participants slept better or worse after a work out compared to other days and if the subjects who worked out in general slept better than the subjects who did not work out. Statistics was made to see if there was difference in sleep in weekdays and weekends/holidays. It was also investigated if exam periods influenced the sleep quantity and quality and if master students had different sleep patterns than bachelor students, and if being in a relationship seems to affect the sleeping patterns. \\
+%\todo[inline]{these things should of course also be investigated for the second period and compared with the first one}
+
+
+
+
+
+
+\subsubsection{Results}
+Sleep statistics, phone usage stats (on/off/present). 
+
 
 Algorithm\\
 
@@ -1481,8 +1622,10 @@ Looking at the data I have collected from the participants, it was clear that no
 
 
 
-\section{Experiment \# 2}
-Evaluation of algorithm + another set of collected data summary summarising the data from the complete period and the second part so it is possible to compare first part with second part. I also want to see if there is any difference in how long people sleep - my guess is, that people sleep lesser when it gets hotter and lighter outside. I would like to see if the data agrees on me on this. In better words - does the students circadian rhythm change when it gets warmer and lighter outside?
+\subsection{Experiment \# 2}
+April to midt July - dataset for machinelearning (learn on dataset from midt November to March and then run on experiment 2 data for evaluation)\\
+
+I also want to see if there is any difference in how long people sleep - my guess is, that people sleep lesser when it gets hotter and lighter outside. I would like to see if the data agrees on me on this. In better words - does the students circadian rhythm change when it gets warmer and lighter outside?
 
 %The user experiment was running from November 2015 to June 2016 and included ten participants. The first four weeks for each participant was used to set up the smartphone and the BASIS watch. Also I met with each participant once a week for all four weeks to ask questions if any to the collected data, and to reconstruct a complete day for each of the four weeks. These four weeks is also referred to as the first stage or the first user experiment. \\
 
