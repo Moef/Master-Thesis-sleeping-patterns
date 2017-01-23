@@ -750,6 +750,7 @@ This chapter is about the data collection. Data was collected from November 2015
 The data from experiment 1 was used as learning data, and the data from experiment 2 was used to check our results from experiment 1. 
 
 \subsection{Experiment \#1}
+\subsubsection{Data From Smartwatch}
 Not researching on the quality of the data but only the quantity, the amount of minutes from when a participant started until March 31 was calculated. Table \ref{tab:totalMinutesWatch} is showing how many minutes with any kind of data the Basis Retriever could export to the daily .CSV files from the watches. Table \ref{tab:totalMinutesWatch} is not differencing between what kind of data the columns contains, only if there is data in them. Later on the results from the quality is illustrated. 
 
 \begin{table}[H]
@@ -787,26 +788,35 @@ Not researching on the quality of the data but only the quantity, the amount of 
 \end{footnotesize}
 \end{table}
 
-In table \ref{tab:daysNightsExp1} a total number of days and nights with any kind of data is listed. The definition of days and nights is defined like this: \todo{FIND SOMETHING TO WRITE HERE}. ALSO WRITE SOMETHING ABOUT HOW YOU DEFINED WHEN A DAY/NIGHT IS VALID OR INVALID AND WHY!
+To get an overview of the number of nights and days with data from the smartwatch, a definition on a day and night was made. We defined a day to run from 07:00 in the morning to 23:00 in the evening and nights between 23:00 and 07:00. The initial definition of a valid day was any day with no more than eight hours of missing data. A valid night is missing no more than two hours of data. The column with data for skintemperature is used as validation for this and the result is shown in table \ref{tab:daysNightsExp1}. The first columns with total days and nights is the number of days and nights participating, the next two columns is the number of days and nights with data, and the last column is a percentage of how many days and nights with data collected out of the possible numbers. The first day and the last night for the experiment is not included. 
 
 \begin{table}[H]
 \center
 \begin{footnotesize}
 	\begin{tabular}{| c | c | c || c | c | c | c | c | c | c | c |}
 	\hline
-	\textbf{S\#} & \textbf{Total} & \textbf{Total} & \textbf{Days} & \textbf{Nights} \\
-	& \textbf{Days} & \textbf{Nights} & & \\
+	\textbf{S\#} & \textbf{Total} & \textbf{Total} & \textbf{Days} & \textbf{Nights} & \textbf{\% Days} & \textbf{\% Nights}\\
+	& \textbf{Days} & \textbf{Nights} & & & &\\
 	\hline
-	S11 & & & & \\
-	S12 & & & & \\
-	S13 & & & & \\
-	S14 & & & & \\
-	S15 & & & & \\
-	S16 & & & & \\
-	S17 & & & & \\
-	S18 & & & & \\
-	S19 & & & & \\
-	S20 & & & & \\
+	S11 & 134 & 134 & 133 & 130 & 99\% & 97\%\\
+	\hline
+	S12 & 141 & 141 & 104 & 107 & 74\% & 76\% \\
+	\hline
+	S13 & 142 & 142 & 127 & 119 & 89\% & 84\%\\
+	\hline
+	S14 & 137 & 137 & 132 & 127 & 96\% & 93\%\\
+	\hline
+	S15 & 141 & 141 & 130 & 133 & 92\% & 94\% \\
+	\hline
+	S16 & 107 & 107 & 67 & 73 & 63\% & 68\%\\
+	\hline
+	S17 & 143 & 143 & 136 & 130 & 95\% & 91\% \\
+	\hline
+	S18 & 88 & 88 & 78 & 71 & 89\% & 81\%\\
+	\hline
+	S19 & 50 & 50 & 35 & 33 & 70\% & 66\%\\
+	\hline
+	S20 & 142 & 142 & 142 & 135 & 100\% & 95\%\\
 	\hline
 	\end{tabular}
 	\caption{Days and nights with any kind of data from beginning to March 31, 2016 - smartwatch.}
@@ -814,7 +824,7 @@ In table \ref{tab:daysNightsExp1} a total number of days and nights with any kin
 \end{footnotesize}
 \end{table}
 
-In Table \ref{tab:averageTotal}, a total average of the first six columns of the BASIS retriever data is shown. For skin- and air temperature, heart rate, and GSR, the average value is calculated based on each data entry in the data set (i.e. seconds) whereas the average for steps and calories is calculated based on a total for each day. 
+The average value for skin temperature, air temperature, heart rate, steps, GSR, and calories for the entire period of experiment 1 is illustrated in Table \ref{tab:averageTotal}. For skin- and air temperature, heart rate, and GSR, the average value is calculated based on each data entry in the data set (i.e. seconds) whereas the average for steps and calories is calculated based on a total for each day. 
 
 \begin{table}[H]
 \center
@@ -850,6 +860,10 @@ In Table \ref{tab:averageTotal}, a total average of the first six columns of the
 	\label{tab:averageTotal}
 \end{footnotesize}
 \end{table}
+
+For each of the variables in Table \ref{tab:averageTotal} an average was calculated for each month. These are listed in Table \ref{tab:skinMinutesWatch} for skin temperature, Table \ref{tab:airMinutesWatch} for air temperature, Table \ref{tab:heartrateWatch} for heart rate, Table \ref{tab:stepsrateWatch} for steps, Table \ref{tab:GSRWatch} for GSR, and Table \ref{tab:caloriesWatch} for calories. \\
+
+Each of the Tables containing average values for each month is also illustrated with graphs in the following figures: \ref{fig:avgSkinTemp1} for skin temperature, \ref{fig:avgAirTemp1} for air temperature, \ref{fig:avgheartrate} for heart rate, \ref{fig:avgsteps1} for steps, \ref{fig:avgGSR} for GSR, and \ref{fig:avgCal} for calories. 
 
 \newpage
 \begin{table}[H]
@@ -1504,8 +1518,9 @@ In Table \ref{tab:averageTotal}, a total average of the first six columns of the
     \label{fig:avgCal}
 \end{figure}
 
-NOW YOU NEED TO MAKE THE SAME TABLES FOR THE PHONE DATA:
-As seen in Table \ref{tab:ping} we work with 7 different file types that contains all our data collected via the smartphones. Below in Table \ref{tab:totalMinutesPhone} is listed how many minutes with any kind of data the files contain. As in Table \ref{tab:totalMinutesWatch}, Table \ref{tab:totalMinutesPhone} does not difference between what kind of data the files contain, only if there is data in them. 
+\newpage
+\subsubsection{Data From mQoL-log}
+As seen in Table \ref{tab:ping} we work with seven different categories of information: User presence events, currently running services, applications used, the cell the phone is connected to, touches on the screen, activity of the user, and luminance level. Once again a table is created to illustrate the quantity level of the data collected. For the data collected on events, a summarisation is done for the data, whereas a total of minutes with data is listed for data collected every 60 seconds, see Table \ref{tab:totalMinutesPhone}. 
 
 \begin{table}[H]
 \center
@@ -1530,45 +1545,49 @@ As seen in Table \ref{tab:ping} we work with 7 different file types that contain
 	S20 & & & & & & &\\
 	\hline
 	\end{tabular}
-	\caption{Days and nights with any kind of data from beginning to March 31, 2016 - smartphone.}
+	\caption{Minutes and datapoints with any kind of data from beginning through March 31, 2016 - smartphone.}
 	\label{tab:totalMinutesPhone}
 \end{footnotesize}
 \end{table}
 
-In table \ref{tab:daysNightsExp1Phone} a total number of days and nights with any kind of data is listed. The definition of days and nights for the smartphones is defined like this: \todo{FIND SOMETHING TO WRITE HERE}. ALSO WRITE SOMETHING ABOUT HOW YOU DEFINED WHEN A DAY/NIGHT IS VALID OR INVALID AND WHY!
+For calculating nights and days with data from the mQoL-log, information about the cell the phone is connected to is used. That information is collected every 60 seconds, giving us the opportunity to make the same calculations as in Table \ref{tab:daysNightsExp1}, hence compare the data. The results are illustrated in Table \ref{tab:daysNightsExp1Phone} and the definitions for valid days and nights are the same as in Table \ref{tab:daysNightsExp1}.
 
 \begin{table}[H]
 \center
 \begin{footnotesize}
 	\begin{tabular}{| c | c | c || c | c | c | c | c | c | c | c |}
 	\hline
-	\textbf{S\#} & \textbf{Total} & \textbf{Total} & \textbf{Days} & \textbf{Nights} \\
-	& \textbf{Days} & \textbf{Nights} & & \\
+	\textbf{S\#} & \textbf{Total} & \textbf{Total} & \textbf{Days} & \textbf{Nights} & \textbf{\% Days} & \textbf{\% Nights}\\
+	& \textbf{Days} & \textbf{Nights} & & & &\\
 	\hline
-	S11 & & & & \\
-	S12 & & & & \\
-	S13 & & & & \\
-	S14 & & & & \\
-	S15 & & & & \\
-	S16 & & & & \\
-	S17 & & & & \\
-	S18 & & & & \\
-	S19 & & & & \\
-	S20 & & & & \\
+	S11 & & & & & &\\
+	S12 & & & & & & \\
+	S13 & & & & & & \\
+	S14 & & & & & & \\
+	S15 & & & & & & \\
+	S16 & & & & & & \\
+	S17 & & & & & & \\
+	S18 & & & & & & \\
+	S19 & & & & & & \\
+	S20 & & & & & & \\
 	\hline
 	\end{tabular}
-	\caption{Days and nights with any kind of data from beginning to March 31, 2016 - smartphone.}
+	\caption{Days and nights with any kind of CellID data from beginning through March 31, 2016 - smartphone.}
 	\label{tab:daysNightsExp1Phone}
 \end{footnotesize}
 \end{table}
 
 
 \subsubsection{Sleep Quantity Assessment}
-\paragraph{Sleep Quantity Results}
+
+
+
+
+%\paragraph{Sleep Quantity Results}
 
 
 \subsubsection{Sleep Quality Assessment}
-\paragraph{Sleep Quality Results}
+%\paragraph{Sleep Quality Results}
 
 
 
@@ -1576,12 +1595,12 @@ In table \ref{tab:daysNightsExp1Phone} a total number of days and nights with an
 \newpage
 \subsection{Experiment \#2}
 \subsubsection{Sleep Quantity Assessment}
-\paragraph{Sleep Quantity Results}
+%\paragraph{Sleep Quantity Results}
 
 
 
 \subsubsection{Sleep Quality Assessment}
-\paragraph{Sleep Quality Results}
+%\paragraph{Sleep Quality Results}
 
 
 
