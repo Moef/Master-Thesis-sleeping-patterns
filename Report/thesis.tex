@@ -27,9 +27,15 @@
 
 %----------------------------KODE START---------------------------------------
 \usepackage{listings}
-\usepackage{color}
-\usepackage[usenames,dvipsnames]{xcolor}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\usepackage{xcolor}
+%\usepackage[usenames,dvipsnames]{xcolor}
+%\definecolor{Gray}{gray}{0.9}
+%\definecolor{LightCyan}{rgb}{0.88,1,1}
+
+%\newcolumntype{a}{>{\columncolor{Gray}}c}
+%\newcolumntype{b}{>{\columncolor{white}}c}
+
+%\definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 \lstset{
   basicstyle=\footnotesize,
@@ -1520,7 +1526,7 @@ Each of the Tables containing average values for each month is also illustrated 
 
 \newpage
 \subsubsection{Data From mQoL-log}
-As seen in Table \ref{tab:ping} we work with seven different categories of information: User presence events, currently running services, applications used, the cell the phone is connected to, touches on the screen, activity of the user, and luminance level. Once again a table is created to illustrate the quantity level of the data collected. For the data collected on events, a summarisation is done for the data, whereas a total of minutes with data is listed for data collected every 60 seconds, see Table \ref{tab:totalMinutesPhone}. 
+As seen in Table \ref{tab:ping} we work with seven different categories of information: User presence events, currently running services, applications used, the cell the phone is connected to, touches on the screen, activity of the user, and luminance level. Once again a table is created to illustrate the quantity level of the data collected. For the data collected on events, a summarisation of data points is done for the data, whereas a total of minutes with data is listed for data collected every 60 seconds, see Table \ref{tab:totalMinutesPhone}. 
 
 \begin{table}[H]
 \center
@@ -1533,7 +1539,7 @@ As seen in Table \ref{tab:ping} we work with seven different categories of infor
 	
 	& \textbf{Events} & \textbf{Service} & & & & \textbf{Activity} & \\
 	\hline
-	S11 & & & & & & &\\
+	S11 & 27177 & xx & 70208 & xx & 10242 & xx & 10329\\
 	S12 & & & & & & &\\
 	S13 & & & & & & &\\
 	S14 & & & & & & &\\
@@ -1579,8 +1585,201 @@ For calculating nights and days with data from the mQoL-log, information about t
 
 
 \subsubsection{Sleep Quantity Assessment}
+Decision on ground truth from watch: 90 minutes or under between minutes of sleep is interpreted as sleep also. Sleep periods under 90 minutes is not included in the analysis. For every participant that gives the following minutes of sleep for each month. The tables below shows both the start time of the recorded sleep, the end time, the total amount of minutes and the conversion to hours - all from S11. Saturdays are marked with a light blue, and Sundays with a darker blue. For the rest of the participants, the tables are listed in Appendix \ref{sec:ground_truth}. \\
 
+With these tables it is possible to see when a participant sleep according to our ground truth from the watches and our assumptions from above. 
 
+\begin{table}[H]
+\center
+\begin{footnotesize}
+	\begin{tabular}{| c | c | c | c |}
+	\hline
+	\textbf{Start Time} & \textbf{End Time} & \textbf{Sleep in Minutes} & \textbf{Sleep in Hours} \\
+	\hline
+11/18/2015 07:57:00 PM & 11/19/2015 07:41:00 AM & 704	& 11,73 \\
+\hline
+11/19/2015 08:29:00 PM & 11/20/2015 01:55:00 PM & 1046 & 17,43\\
+\hline
+\colorbox{blue!20}{11/21/2015 01:34:00 AM} & \colorbox{blue!20}{11/21/2015 08:29:00 AM} & \colorbox{blue!20}{416} & \colorbox{blue!20}{6,93}\\
+\hline
+\colorbox{blue!20}{11/21/2015 04:42:00 PM} & \colorbox{blue!20}{11/21/2015 06:30:00 PM } & \colorbox{blue!20}{109} & \colorbox{blue!20}{1,82}\\
+\hline\colorbox{blue!30}{11/22/2015 02:19:00 AM} & \colorbox{blue!30}{11/22/2015 11:45:00 AM} & \colorbox{blue!30}{567} & \colorbox{blue!30}{9,45}\\
+\hline\colorbox{blue!30}{11/22/2015 11:08:00 PM} & \colorbox{blue!30}{11/23/2015 06:49:00 AM} & \colorbox{blue!30}{461} & \colorbox{blue!30}{7,68}\\
+\hline11/23/2015 08:38:00 AM & 11/23/2015 11:34:00 AM & 177 & 2,95\\
+\hline11/23/2015 11:11:00 PM & 11/24/2015 09:25:00 AM & 614 & 10,23\\
+\hline11/24/2015 10:22:00 PM & 11/25/2015 08:22:00 AM & 600 & 10,00\\
+\hline11/26/2015 12:15:00 AM & 11/26/2015 10:29:00 AM	& 615 & 10,25\\
+\hline11/27/2015 12:57:00 AM & 11/27/2015 11:40:00 AM	& 644 & 10,73\\
+\hline\colorbox{blue!20}{11/28/2015 01:44:00 AM} & \colorbox{blue!20}{11/28/2015 11:10:00 AM} & \colorbox{blue!20}{567} & \colorbox{blue!20}{9,45}\\
+\hline\colorbox{blue!30}{11/29/2015 06:04:00 AM} & \colorbox{blue!30}{11/29/2015 08:40:00 AM} & \colorbox{blue!30}{157} & \colorbox{blue!30}{2,62}\\
+\hline\colorbox{blue!30}{11/29/2015 07:21:00 PM} & \colorbox{blue!30}{11/30/2015 07:18:00 AM} & \colorbox{blue!30}{717} & \colorbox{blue!30}{11,95}\\
+\hline11/30/2015 09:58:00 AM & 11/30/2015 11:51:00 AM & 114 & 1,90\\
+\hline11/30/2015 08:22:00 PM & 12/01/2015 10:58:00 AM & 876 & 14,60\\
+	\hline
+	\end{tabular}
+	\caption{Participant S11 - Sleep in minutes and hours for November 2015}
+	\label{tab:S11NovPhone}
+\end{footnotesize}
+\end{table}
+
+\begin{table}[H]
+\center
+\begin{footnotesize}
+	\begin{tabular}{| c | c | c | c |}
+	\hline
+	\textbf{Start Time} & \textbf{End Time} & \textbf{Sleep in Minutes} & \textbf{Sleep in Hours} \\
+	\hline
+12/01/2015 12:50:00 AM & 12/01/2015 03:41:00 PM & 172 & 2,87\\
+	\hline12/01/2015 07:29:00	PM & 12/02/2015 05:42:00 AM & 613 & 10,22\\
+	\hline12/02/2015 09:21:00	AM & 12/02/2015 11:54:00 AM & 154 & 2,57\\
+	\hline12/02/2015 07:09:00 PM & 12/02/2015 09:21:00 PM & 133 & 2,22\\
+	\hline12/02/2015 11:02:00 PM & 12/03/2015 07:31:00 AM & 509 & 8,48\\
+	\hline12/04/2015 12:35:00 AM & 12/04/2015 09:20:00 AM & 526 & 8,77\\
+	\hline
+\colorbox{blue!20}{12/05/2015 01:45:00 AM} & \colorbox{blue!20}{12/05/2015 08:58:00 AM} & \colorbox{blue!20}{434} & \colorbox{blue!20}{7,23}\\
+	\hline\colorbox{blue!30}{12/06/2015 04:05:00 AM} & \colorbox{blue!30}{12/06/2015 10:30:00 AM} & \colorbox{blue!30}{386} & \colorbox{blue!30}{6,43}\\
+	\hline12/07/2015 12:22:00 AM & 12/07/2015 08:13:00 AM & 472 & 7,87\\
+	\hline12/07/2015 11:13:00 PM & 12/08/2015 08:58:00 AM & 585 & 9,75\\
+	\hline12/09/2015 12:35:00 AM & 12/09/2015 07:24:00 AM & 410 & 6,83\\
+	\hline12/10/2015 12:44:00 AM & 12/10/2015 08:22:00 AM & 459 & 7,65\\
+	\hline12/10/2015 11:18:00 PM & 12/11/2015 07:05:00 AM & 467 & 7,78\\
+	\hline\colorbox{blue!20}{12/12/2015 02:44:00 AM} & \colorbox{blue!20}{12/12/2015 10:28:00 AM} & \colorbox{blue!20}{465} & \colorbox{blue!20}{7,75} \\
+	\hline\colorbox{blue!30}{12/13/2015 12:22:00 AM} & \colorbox{blue!30}{12/13/2015 07:57:00 AM} & \colorbox{blue!30}{456} & \colorbox{blue!30}{7,60}\\
+	\hline\colorbox{blue!30}{12/13/2015 11:22:00 PM} & \colorbox{blue!30}{12/14/2015 07:43:00 AM} & \colorbox{blue!30}{501} & \colorbox{blue!30}{8,35}\\
+	\hline12/15/2015 12:06:00 AM & 12/15/2015 08:50:00 AM & 525 & 8,75\\
+	\hline12/16/2015 12:47:00 AM & 12/16/2015 06:28:00 AM	& 342 & 5,70\\
+	\hline12/17/2015 12:34:00 AM & 12/17/2015 07:48:00 AM	& 435 & 7,25\\
+	\hline12/18/2015 01:31:00 AM & 12/18/2015 10:19:00 AM	& 529 & 8,82\\
+	\hline\colorbox{blue!20}{12/19/2015 02:46:00 AM} & \colorbox{blue!20}{12/19/2015 10:22:00 AM} & \colorbox{blue!20}{457} & \colorbox{blue!20}{7,62}\\
+	\hline\colorbox{blue!30}{12/20/2015 03:21:00 AM} & \colorbox{blue!30}{12/20/2015 10:22:00 AM} & \colorbox{blue!30}{422} & \colorbox{blue!30}{7,03} \\
+	\hline\colorbox{blue!30}{12/20/2015 11:49:00 PM} & \colorbox{blue!30}{12/21/2015 08:14:00 AM} & \colorbox{blue!30}{505} & \colorbox{blue!30}{8,42}\\
+	\hline12/21/2015 11:35:00 PM & 12/22/2015 08:55:00 AM & 560 & 9,33\\
+	\hline12/23/2015 12:18:00 AM & 12/23/2015 08:58:00 AM & 521 & 8,68\\
+	\hline12/23/2015 09:39:00 PM & 12/24/2015 05:32:00 AM	& 473 & 7,88\\
+	\hline12/25/2015 01:59:00 AM & 12/25/2015 05:07:00 AM	& 189 & 3,15\\
+	\hline12/25/2015 07:07:00 AM & 12/25/2015 09:50:00 AM	& 164	& 2,73\\
+	\hline\colorbox{blue!20}{12/26/2015 01:39:00 AM} & \colorbox{blue!20}{12/26/2015 10:24:00 AM} & \colorbox{blue!20}{526} & \colorbox{blue!20}{8,77}\\
+	\hline\colorbox{blue!30}{12/27/2015 02:17:00 AM} & \colorbox{blue!30}{12/27/2015 08:35:00 AM} & \colorbox{blue!30}{379} & \colorbox{blue!30}{6,32} \\
+	\hline\colorbox{blue!30}{12/27/2015 11:13:00 PM} & \colorbox{blue!30}{12/28/2015 07:16:00 AM} & \colorbox{blue!30}{483} & \colorbox{blue!30}{8,05}\\
+	\hline12/28/2015 10:44:00 PM & 12/29/2015 06:40:00 AM	& 476 & 7,93\\
+	\hline12/30/2015 02:41:00 AM & 12/30/2015 10:56:00 AM & 496 & 8,27\\
+	\hline12/31/2015 12:17:00 AM & 12/31/2015 09:19:00 AM	& 543 & 9,05\\
+	\hline
+	\end{tabular}
+	\caption{Participant S11 - Sleep in minutes and hours for December 2015}
+	\label{tab:S11DecPhone}
+\end{footnotesize}
+\end{table}
+
+\begin{table}[H]
+\center
+\begin{footnotesize}
+	\begin{tabular}{| c | c | c | c |}
+	\hline
+	\textbf{Start Time} & \textbf{End Time} & \textbf{Sleep in Minutes} & \textbf{Sleep in Hours} \\
+	\hline
+01/01/2016 10:17:00 AM & 01/01/2016 12:31:00 AM	& 135 & 2,25\\
+\hline01/01/2016 11:07:00 PM & 01/02/2016 07:49:00 AM & 522 & 8,70\\\hline\colorbox{blue!20}{01/02/2016 11:49:00 PM} & \colorbox{blue!20}{01/03/2016 06:03:00 AM} & \colorbox{blue!20}{374} & \colorbox{blue!20}{6,23}\\\hline\colorbox{blue!30}{01/03/2016 10:36:00 PM} & \colorbox{blue!30}{01/04/2016 06:36:00 AM} & \colorbox{blue!30}{480} & \colorbox{blue!20}{8,00}\\\hline01/04/2016 11:36:00 PM & 01/05/2016 07:12:00 AM & 456 & 7,60\\\hline01/05/2016 11:23:00 PM & 01/06/2016 07:55:00 AM & 512 & 8,53\\\hline01/07/2016 00:10:00 AM & 01/07/2016 08:13:00 AM & 484 & 8,07\\\hline01/07/2016 11:01:00 PM & 01/08/2016 08:30:00 AM & 569 & 9,48\\\hline\colorbox{blue!20}{01/09/2016 01:11:00 AM} & \colorbox{blue!20}{01/09/2016 07:54:00 AM} & \colorbox{blue!20}{404} & \colorbox{blue!20}{6,73}\\\hline\colorbox{blue!30}{01/10/2016 00:25:00 AM} & \colorbox{blue!30}{01/10/2016 08:35:00 AM} & \colorbox{blue!30}{491} & \colorbox{blue!30}{8,18}\\\hline\colorbox{blue!30}{01/10/2016 11:18:00 PM} & \colorbox{blue!30}{01/11/2016 07:33:00 AM} & \colorbox{blue!30}{495} & \colorbox{blue!30}{8,25}\\\hline01/12/2016 00:16:00 AM & 01/12/2016 08:40:00 AM & 505 & 8,42\\\hline01/12/2016 11:19:00 PM & 01/13/2016 07:59:00 AM	& 520 & 8,67\\\hline01/14/2016 12:06:00 AM & 01/14/2016 07:33:00 AM	& 448 & 7,47\\\hline01/15/2016 12:08:00 AM & 01/15/2016 07:33:00 AM	& 446 & 7,43\\\hline\colorbox{blue!20}{01/16/2016 11:40:00 PM} & \colorbox{blue!20}{01/17/2016 08:24:00 AM} & \colorbox{blue!20}{524} & \colorbox{blue!20}{8,73}\\\hline\colorbox{blue!30}{01/17/2016 10:27:00 PM} & \colorbox{blue!30}{01/18/2016 08:11:00 AM} & \colorbox{blue!30}{584} & \colorbox{blue!30}{9,73}\\
+\hline01/18/2016 11:22:00 PM & 01/19/2016 05:37:00 AM	& 375 & 6,25\\\hline01/19/2016 11:17:00 PM & 01/20/2016 07:38:00 AM	& 501 & 8,35\\\hline01/20/2016 11:40:00 PM & 01/21/2016 07:56:00 AM	& 496 & 8,27\\\hline01/22/2016 01:52:00 AM & 01/22/2016 09:01:00 AM	& 430 & 7,17\\\hline\colorbox{blue!20}{01/23/2016 12:08:00 AM} & \colorbox{blue!20}{01/23/2016 07:49:00 AM} & \colorbox{blue!20}{462} & \colorbox{blue!20}{7,70}\\\hline\colorbox{blue!20}{01/23/2016 11:27:00 PM} & \colorbox{blue!20}{01/24/2016 08:03:00 AM} & \colorbox{blue!20}{516} & \colorbox{blue!20}{8,60}\\\hline01/25/2016 11:46:00 PM & 01/26/2016 07:42:00 AM	& 476 & 7,93\\\hline01/26/2016 11:11:00 PM & 01/27/2016 09:02:00 AM	& 591 & 9,85\\\hline01/28/2016 03:59:00 AM & 01/28/2016 08:56:00 AM	& 298 & 4,97\\\hline01/29/2016 01:03:00 AM & 01/29/2016 09:06:00 AM	& 484 & 8,07\\\hline\colorbox{blue!20}{01/30/2016 07:15:00 AM} & \colorbox{blue!20}{01/30/2016 10:18:00 AM} & \colorbox{blue!20}{184} & \colorbox{blue!20}{3,07}\\\hline\colorbox{blue!20}{01/30/2016 11:37:00 PM} & \colorbox{blue!20}{01/31/2016 06:15:00 AM} & \colorbox{blue!20}{398} & \colorbox{blue!20}{6,63}\\
+	\hline
+	\end{tabular}
+	\caption{Participant S11 - Sleep in minutes and hours for January 2016}
+	\label{tab:S11JanPhone}
+\end{footnotesize}
+\end{table}
+
+\begin{table}[H]
+\center
+\begin{footnotesize}
+	\begin{tabular}{| c | c | c | c |}
+	\hline
+	\textbf{Start Time} & \textbf{End Time} & \textbf{Sleep in Minutes} & \textbf{Sleep in Hours} \\
+	\hline
+02/01/2016 00:35:00 AM & 02/01/2016 08:04:00 AM	& 450 & 7,50\\
+\hline02/01/2016 11:40:00	PM & 02/02/2016 08:07:00 AM & 507 & 8,45\\
+\hline02/02/2016 11:29:00	PM & 02/03/2016 02:40:00 AM & 191 & 3,18\\
+\hline02/03/2016 04:25:00	AM & 02/03/2016 07:10:00 AM	& 166 & 2,77\\
+\hline02/04/2016 02:50:00	AM & 02/04/2016 06:22:00 AM	& 213 & 3,55\\
+\hline02/05/2016 02:10:00	AM & 02/05/2016 10:08:00 AM	& 479 & 7,98\\
+\hline\colorbox{blue!20}{02/06/2016 04:49:00 AM} & \colorbox{blue!20}{02/06/2016 09:04:00 AM} & \colorbox{blue!20}{256} & \colorbox{blue!20}{4,27}\\
+\hline\colorbox{blue!30}{02/07/2016 01:10:00 AM} & \colorbox{blue!30}{02/07/2016 10:35:00 AM} & \colorbox{blue!30}{566} & \colorbox{blue!30}{9,43}\\
+\hline02/08/2016 04:47:00	AM & 02/08/2016 08:33:00 AM	& 227 & 3,78\\
+\hline02/09/2016 02:26:00	AM & 02/09/2016 07:36:00 AM	& 311 &	5,18\\
+\hline02/10/2016 03:10:00	AM & 02/10/2016 07:09:00 AM	& 240 &	4,00\\
+\hline02/10/2016 11:13:00	PM & 02/11/2016 07:33:00 AM	& 500 &	8,33\\
+\hline02/12/2016 00:36:00	AM & 02/12/2016 02:19:00 AM	& 104 &	1,73\\
+\hline02/12/2016 05:00:00	AM & 02/12/2016 10:35:00 AM	& 336 &	5,60\\
+\hline\colorbox{blue!30}{02/14/2016 04:29:00 AM} & \colorbox{blue!30}{02/14/2016 10:20:00 AM} & \colorbox{blue!30}{352} & \colorbox{blue!30}{5,87}\\
+\hline02/15/2016 12:11:00 AM & 02/15/2016 08:21:00 AM & 491 &	8,18\\
+\hline02/16/2016 02:25:00 AM & 02/16/2016 07:48:00 AM & 324 &	5,40\\
+\hline02/17/2016 12:17:00 AM & 02/17/2016 08:16:00 AM & 480 &	8,00\\
+\hline02/17/2016 11:55:00 PM & 02/18/2016 07:36:00 AM & 461 &	7,68\\
+\hline02/19/2016 01:10:00 AM & 02/19/2016 09:19:00 AM & 490 &	8,17\\
+\hline02/19/2016 11:53:00 PM & 02/20/2016 07:50:00 AM & 477 &	7,95\\
+\hline\colorbox{blue!30}{02/20/2016 11:38:00 PM} & \colorbox{blue!30}{02/21/2016 10:16:00 AM} & \colorbox{blue!30}{638} & \colorbox{blue!30}{10,63}\\
+\hline02/22/2016 12:30:00 AM & 02/22/2016 07:48:00 AM & 439 &	7,32\\
+\hline02/22/2016 10:46:00 PM & 02/23/2016 07:44:00 AM & 538 &	8,97\\
+\hline02/24/2016 12:15:00 AM & 02/24/2016 01:58:00 AM & 104 &	1,73\\
+\hline02/24/2016 05:05:00 AM & 02/24/2016 07:46:00 AM & 162 &	2,70\\
+\hline02/25/2016 12:35:00 AM & 02/25/2016 07:38:00 AM & 424 &	7,07\\
+\hline02/25/2016 11:57:00 PM & 02/26/2016 07:35:00 AM & 458 &	7,63\\
+\hline\colorbox{blue!20}{02/27/2016 02:53:00 AM} & \colorbox{blue!20}{02/27/2016 08:52:00 AM} & \colorbox{blue!20}{360} & \colorbox{blue!20}{6,00}\\
+\hline\colorbox{blue!20}{02/27/2016 11:36:00 PM} & \colorbox{blue!20}{02/28/2016 07:26:00 AM} & \colorbox{blue!20}{470} & \colorbox{blue!20}{7,83}\\
+\hline\colorbox{blue!30}{02/28/2016 11:41:00 PM} & \colorbox{blue!30}{02/29/2016 08:01:00 AM} & \colorbox{blue!30}{500} & \colorbox{blue!30}{8,33}\\
+	\hline
+	\end{tabular}
+	\caption{Participant S11 - Sleep in minutes and hours for February 2016}
+	\label{tab:S11FebPhone}
+\end{footnotesize}
+\end{table}
+
+\begin{table}[H]
+\center
+\begin{footnotesize}
+	\begin{tabular}{| c | c | c | c |}
+	\hline
+	\textbf{Start Time} & \textbf{End Time} & \textbf{Sleep in Minutes} & \textbf{Sleep in Hours} \\
+	\hline
+03/01/2016 02:02:00 AM & 03/01/2016 07:38:00 AM & 337 & 5,62\\
+\hline03/01/2016 10:52:00 PM & 03/02/2016 06:49:00 AM & 477 & 7,95\\
+\hline03/02/2016 11:33:00 PM & 03/03/2016 07:01:00 AM & 448 & 7,47\\
+\hline03/04/2016 00:42:00 AM & 03/04/2016 08:58:00 AM & 497 & 8,28\\
+\hline03/04/2016 11:54:00 PM & 03/05/2016 08:41:00 AM & 527 & 8,78\\
+\hline\colorbox{blue!20}{03/05/2016 09:33:00 PM} & \colorbox{blue!20}{03/06/2016 00:12:00 AM} & \colorbox{blue!20}{159} & \colorbox{blue!20}{2,65}\\
+\hline\colorbox{blue!30}{03/06/2016 02:17:00 AM} & \colorbox{blue!30}{03/06/2016 08:56:00 AM} & \colorbox{blue!30}{400} & \colorbox{blue!30}{6,67}\\
+\hline\colorbox{blue!30}{03/06/2016 11:46:00 PM} & \colorbox{blue!30}{03/07/2016 07:44:00 AM} & \colorbox{blue!30}{478} & \colorbox{blue!30}{7,97}\\
+\hline03/07/2016 11:43:00 PM & 03/08/2016 06:55:00 AM & 432 & 7,20\\
+\hline03/08/2016 11:21:00 PM & 03/09/2016 07:46:00 AM & 505 & 8,42\\
+\hline03/09/2016 11:25:00 PM & 03/10/2016 01:24:00 AM & 119 & 1,98\\
+\hline03/10/2016 03:23:00 AM & 03/10/2016 07:21:00 AM & 239 & 3,98\\
+\hline03/11/2016 01:20:00 AM & 03/11/2016 08:45:00 AM & 446 & 7,43\\
+\hline\colorbox{blue!20}{03/12/2016 01:45:00 AM} & \colorbox{blue!20}{03/12/2016 08:46:00 AM} & \colorbox{blue!20}{422} & \colorbox{blue!20}{7,03}\\
+\hline\colorbox{blue!30}{03/13/2016 03:21:00 AM} & \colorbox{blue!30}{03/13/2016 09:20:00 AM} & \colorbox{blue!30}{360} & \colorbox{blue!30}{6,00}\\
+\hline\colorbox{blue!30}{03/13/2016 09:59:00 PM} & \colorbox{blue!30}{03/14/2016 08:05:00 AM} & \colorbox{blue!30}{606} & \colorbox{blue!30}{10,10}\\
+\hline03/14/2016 11:36:00 PM & 03/15/2016 06:40:00 AM	& 424 & 7,07\\
+\hline03/15/2016 11:51:00 PM & 03/16/2016 07:37:00 AM	& 466 & 7,77\\
+\hline03/16/2016 11:47:00 PM & 03/17/2016 06:32:00 AM	& 405 & 6,75\\
+\hline03/17/2016 11:15:00 PM & 03/18/2016 07:46:00 AM	& 511 & 8,52\\
+\hline03/18/2016 11:48:00 PM & 03/19/2016 01:31:00 AM	& 103 & 1,72\\
+\hline\colorbox{blue!20}{03/19/2016 03:15:00 AM} & \colorbox{blue!20}{03/19/2016 08:49:00 AM} & \colorbox{blue!20}{335} & \colorbox{blue!20}{5,58}\\
+\hline\colorbox{blue!30}{03/20/2016 04:37:00 AM} & \colorbox{blue!30}{03/20/2016 07:42:00 AM} & \colorbox{blue!30}{186} & \colorbox{blue!30}{3,10}\\
+\hline03/21/2016 11:51:00 PM & 03/22/2016 07:41:00 AM	& 470 & 7,83\\
+\hline03/22/2016 11:56:00 PM & 03/23/2016 07:58:00 AM	& 482 & 8,03\\
+\hline03/24/2016 03:09:00 AM & 03/24/2016 06:21:00 AM	& 193 & 3,22\\
+\hline03/24/2016 11:53:00 PM & 03/25/2016 07:40:00 AM	& 467 & 7,78\\
+\hline\colorbox{blue!20}{03/26/2016 05:07:00 AM} & \colorbox{blue!20}{03/26/2016 07:05:00 AM} & \colorbox{blue!20}{119} & \colorbox{blue!20}{1,98}\\
+\hline\colorbox{blue!20}{03/26/2016 11:49:00 PM} & \colorbox{blue!20}{03/27/2016 11:14:00 AM} & \colorbox{blue!20}{625} & \colorbox{blue!20}{10,42}\\
+\hline03/28/2016 12:12:00 AM & 03/28/2016 08:16:00 AM	& 485 & 8,08\\
+\hline03/28/2016 11:14:00 PM & 03/29/2016 07:43:00 AM	& 509 & 8,48\\
+\hline03/29/2016 11:28:00 PM & 03/30/2016 07:29:00 AM	& 481 & 8,02\\
+\hline03/31/2016 12:08:00 AM & 03/31/2016 06:59:00 AM	& 412 & 6,87\\
+	
+	\hline
+	\end{tabular}
+	\caption{Participant S11 - Sleep in minutes and hours for March 2016}
+	\label{tab:S11MarPhone}
+\end{footnotesize}
+\end{table}
 
 
 %\paragraph{Sleep Quantity Results}
@@ -1817,6 +2016,10 @@ Provide design implications for a digital solution for mobilephones to help comb
 
 
 %\includepdf[pages=1-9, pagecommand={}, scale=0.5]{survey.pdf}
+
+\newpage
+\section{Minutes and Hours of Sleep From Watch} \label{sec:ground_truth}
+\todo[inline]{Put in the tables with hours and minutes of sleep from watch for participant S12, S13, S14, S15, S16, S17, S18, S19, S20}
 
 
 
